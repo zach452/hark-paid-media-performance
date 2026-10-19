@@ -1,0 +1,5 @@
+.next
+node_modules
+reference
+package-lock.json
+CLAUDE.md

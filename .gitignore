@@ -1,0 +1,19 @@
+node_modules/
+.next/
+out/
+coverage/
+*.tsbuildinfo
+next-env.d.ts
+
+# Secrets: never commit tokens or keys
+.env
+.env*.local
+.shadow-tokens.json
+*.p8
+*.pem
+
+# Local probe output (may contain account data); commit only anonymized fixtures
+.probe/
+
+.vercel
+.DS_Store
