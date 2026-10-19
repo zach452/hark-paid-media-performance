@@ -195,6 +195,21 @@
         limit: 5000,
       };
     },
+    // Shadow has 3-second plays only as a daily account total (the same value on every ad row),
+    // so ask for it once per day.
+    metaDaily: function (from, to) {
+      return {
+        workspace: WORKSPACE,
+        platform: 'meta_ads',
+        table: 'ads',
+        start_date: from,
+        end_date: to,
+        group_by: ['date'],
+        aggregations: { meta_date_video_3s_views: ['max'] },
+        order_by: [{ column: 'date', direction: 'ASC' }],
+        limit: 400,
+      };
+    },
     tiktok: function (from, to) {
       return {
         workspace: WORKSPACE,
@@ -258,13 +273,8 @@
         inAppActions: null,
         conv: conv,
       };
-      if (channel === 'search') {
-        // The dashboard counts the export's install-specific "Installs" column for Search.
-        // Shadow only has all conversions, so live Search days carry no installs (gaps.md #1).
-        row.installsReported = null;
-        row.installsTap = null;
-        row.installsView = 0;
-      }
+      // Search installs are all conversions too: the original parser's rule when an export had
+      // no "Installs" column (Installs ?? Conversions). Shadow has no install-only split.
       if (channel === 'hi') {
         row.noInstall = true;
         row.platform = 'YouTube Masthead';
@@ -402,6 +412,79 @@
     });
   }
 
+  /**
+   * Split each day's account total of 3-second plays across that day's ads, in proportion to
+   * each ad's early retention projected back from its 25% and 50% views (2 × p25 − p50; plays,
+   * then impressions, when a day has none). Largest-remainder rounding keeps whole numbers that
+   * add back to the exact daily total, so any figure over all of Meta stays exact; per-ad and
+   * per-objective figures are estimates (meta.v3Est). Backtested against Ads Manager 3-second
+   * plays for Oct 14–18: per-ad hook rate within 7.6% spend-weighted (9.5% median), per
+   * objective within 10%. Returns whether anything was estimated.
+   */
+  function allocate3s(rows, dailyBodies) {
+    var daily = {};
+    (dailyBodies || []).forEach(function (body) {
+      ((body && body.groups) || []).forEach(function (g) {
+        if (g.date && g.max_meta_date_video_3s_views != null)
+          daily[g.date] = num(g.max_meta_date_video_3s_views);
+      });
+    });
+    var byDay = {};
+    rows.forEach(function (r) {
+      (byDay[r.date] = byDay[r.date] || []).push(r);
+    });
+    var estimated = false;
+    Object.keys(byDay).forEach(function (date) {
+      if (!(date in daily)) return; // stays null: hook and hold show — for that day
+      var list = byDay[date];
+      var total = Math.round(daily[date]);
+      var weights = [
+        function (r) {
+          return 2 * (r.meta.v25 || 0) - (r.meta.v50 || 0);
+        },
+        function (r) {
+          return r.meta.plays;
+        },
+        function (r) {
+          return r.impressions;
+        },
+      ];
+      var w = null;
+      var sum = 0;
+      for (var i = 0; i < weights.length && !sum; i++) {
+        w = weights[i];
+        sum = list.reduce(function (t, r) {
+          return t + (w(r) || 0);
+        }, 0);
+      }
+      var parts = list.map(function (r) {
+        var x = sum ? (total * (w(r) || 0)) / sum : 0;
+        return { r: r, n: Math.floor(x), rem: x - Math.floor(x) };
+      });
+      var left = sum
+        ? total -
+          parts.reduce(function (t, p) {
+            return t + p.n;
+          }, 0)
+        : 0;
+      parts
+        .slice()
+        .sort(function (a, b) {
+          return b.rem - a.rem;
+        })
+        .slice(0, left)
+        .forEach(function (p) {
+          p.n++;
+        });
+      parts.forEach(function (p) {
+        p.r.meta.v3 = p.n;
+        p.r.meta.v3Est = list.length > 1;
+      });
+      if (list.length > 1) estimated = true;
+    });
+    return estimated;
+  }
+
   // ---- Dataset ---------------------------------------------------------------------------------
 
   function byDate(x, y) {
@@ -479,16 +562,30 @@
       })
     )
       warnings.push(
-        'Google Search installs are not in Shadow (it has only all conversions), so Search shows no installs or CPA. Spend, clicks and impressions are complete.',
+        'Google Search installs are all Google Ads conversions, as the original dashboard counted them when an export had no Installs column. Shadow has no install-only split.',
+      );
+    if (
+      rows.some(function (r) {
+        return r.channel === 'meta' && r.meta && r.meta.v3Est;
+      })
+    )
+      warnings.push(
+        'Meta 3-second plays come from Shadow as a daily account total, so totals for all of Meta are exact. Per-ad and per-objective 3-second plays, hook rate, hold rate and cost per 3-second play (marked *) split that total across ads by their early video retention (2 × 25% views − 50% views).',
+      );
+    if (
+      rows.some(function (r) {
+        return r.channel === 'meta' && (!r.meta || r.meta.v3 == null);
+      })
+    )
+      warnings.push(
+        'Some Meta days have no 3-second plays from Shadow yet, so hook and hold rate leave them out.',
       );
     if (
       rows.some(function (r) {
         return r.channel === 'meta';
       })
     )
-      warnings.push(
-        'Meta 3-second plays, shares, saves and comments are not in Shadow per ad, so hook rate, hold rate and cost per 3-second play show —.',
-      );
+      warnings.push('Meta shares, saves and comments are not in Shadow, so those columns read 0.');
     if (
       rows.some(function (r) {
         return (r.channel === 'tiktok' || r.platform === 'TikTok TopView') && r.reach == null;
@@ -526,6 +623,7 @@
     mapGoogle: mapGoogle,
     mapMeta: mapMeta,
     mapTikTok: mapTikTok,
+    allocate3s: allocate3s,
     historyChunks: historyChunks,
     buildDataset: buildDataset,
     addDays: addDays,
@@ -562,7 +660,7 @@
 
   function sourceOf(key) {
     var q = key.split('|')[0];
-    return q === 'searchCampaigns' ? 'google' : q;
+    return q === 'searchCampaigns' ? 'google' : q; // metaDaily stays its own: Meta loads without it
   }
 
   function liveFromBodies() {
@@ -583,6 +681,8 @@
     ['google', 'meta', 'tiktok'].forEach(function (id) {
       if (state.errors[id]) return void (out[id] = { error: state.errors[id] });
       if (!have(id) || (id === 'google' && !have('searchCampaigns'))) return;
+      // Wait for the daily 3-second totals too, unless they failed (then hook and hold show —).
+      if (id === 'meta' && !have('metaDaily') && !state.errors.metaDaily) return;
       var ids = id === 'google' ? searchIdSet(b['searchCampaigns|all']) : null;
       var rows = [];
       var truncated = false;
@@ -593,6 +693,13 @@
           id === 'google' ? mapGoogle(body, ids) : id === 'meta' ? mapMeta(body) : mapTikTok(body),
         );
       });
+      if (id === 'meta')
+        window.__harkV3Est = allocate3s(
+          rows,
+          keysFor('metaDaily').map(function (k) {
+            return b[k];
+          }),
+        );
       out[id] = { rows: rows, truncated: truncated };
     });
     return out;
@@ -705,10 +812,10 @@
     push();
   }
 
-  /** Every call the page makes: three per month of history plus one list of Search campaigns. */
+  /** Every call the page makes: four per month of history plus one list of Search campaigns. */
   function eachQuery(fn) {
     fn('searchCampaigns|all', QUERIES.searchCampaigns(win.from, win.to), true);
-    ['google', 'meta', 'tiktok'].forEach(function (name) {
+    ['google', 'meta', 'metaDaily', 'tiktok'].forEach(function (name) {
       win.chunks.forEach(function (c) {
         fn(name + '|' + c.from, QUERIES[name](c.from, c.to), c.recent);
       });

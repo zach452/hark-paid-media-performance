@@ -107,8 +107,8 @@ describe('mapGoogle', () => {
       conv: 551,
     });
   });
-  it('leaves Search installs empty but keeps conversions', () => {
-    expect(rows[2]).toMatchObject({ theme: 'Brand', installsReported: null, installsTap: null, conv: 23 });
+  it('counts Search conversions as installs, as the original parser did without an Installs column', () => {
+    expect(rows[2]).toMatchObject({ theme: 'Brand', installsReported: 23, installsTap: 23, conv: 23 });
     expect(rows[1].theme).toBe('Other'); // same as the export's Search_NB_Scale ad groups
   });
   it('marks Masthead as High Impact with no installs', () => {
@@ -265,8 +265,8 @@ describe('buildDataset', () => {
     );
     const text = ds.warnings.join('\n');
     expect(text).toContain('Apple Search Ads is not available');
-    expect(text).toContain('Google Search installs are not in Shadow');
-    expect(text).toContain('Meta 3-second plays');
+    expect(text).toContain('Google Search installs are all Google Ads conversions');
+    expect(text).toContain('Meta shares, saves and comments are not in Shadow');
     expect(text).toContain('Shadow history starts: Google Ads from Oct 6, Meta from Oct 14.');
     expect(ds.sources[2].sheets[0].note).toBe('Loading…');
   });
@@ -280,6 +280,41 @@ describe('buildDataset', () => {
     expect(ds.warnings).toContain(
       'Meta could not load from Shadow (server_unavailable). Its views are empty until it does.',
     );
+  });
+});
+
+describe('allocate3s', () => {
+  const ad = (date: string, impressions: number, v25: number, plays = 0) => ({
+    date,
+    channel: 'meta',
+    impressions,
+    meta: { v25, plays, v3: null as number | null, v3Est: false },
+  });
+  const daily = [{ groups: [{ date: '2026-10-18', max_meta_date_video_3s_views: 235110 }] }];
+
+  it('splits the daily total by early retention (2 × p25 − p50) and adds back to it exactly', () => {
+    const rows = [
+      ad('2026-10-18', 517000, 30000),
+      ad('2026-10-18', 356822, 10001),
+      ad('2026-10-18', 561048, 3),
+    ];
+    expect(L.allocate3s(rows, daily)).toBe(true);
+    expect(rows.reduce((t, r) => t + (r.meta.v3 ?? 0), 0)).toBe(235110);
+    expect(rows[0]!.meta.v3).toBeGreaterThan(rows[1]!.meta.v3!);
+    expect(rows.every((r) => r.meta.v3Est)).toBe(true);
+  });
+  it('falls back to plays when a day has no 25% views, and is exact for a single ad', () => {
+    const two = [ad('2026-10-18', 100, 0, 30), ad('2026-10-18', 100, 0, 10)];
+    L.allocate3s(two, daily);
+    expect(two.map((r) => r.meta.v3)).toEqual([176333, 58777]);
+    const one = [ad('2026-10-18', 100, 5)];
+    expect(L.allocate3s(one, daily)).toBe(false);
+    expect(one[0]!.meta).toMatchObject({ v3: 235110, v3Est: false });
+  });
+  it('leaves days without a daily total empty', () => {
+    const rows = [ad('2026-10-19', 100, 5), ad('2026-10-19', 100, 5)];
+    L.allocate3s(rows, daily);
+    expect(rows.map((r) => r.meta.v3)).toEqual([null, null]);
   });
 });
 

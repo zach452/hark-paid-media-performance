@@ -18,6 +18,8 @@ interface Patch {
   why: string;
   find: string;
   replace: string;
+  /** How many times `find` must occur (default 1); every occurrence is replaced. */
+  count?: number;
 }
 
 const BUNDLE_PATCHES: Patch[] = [
@@ -110,6 +112,73 @@ const BUNDLE_PATCHES: Patch[] = [
     why: '"Refreshing the data" now describes the live source, so every viewer gets it (it was team-only)',
     find: '(0,H.jsxs)(`div`,{className:t?`grid cols-2`:`grid`,children:[t&&(0,H.jsx)(jG,{}),',
     replace: '(0,H.jsxs)(`div`,{className:`grid cols-2`,children:[(0,H.jsx)(jG,{}),',
+  },
+  // Meta 3-second plays are a daily account total in Shadow, split across ads in live.js. Mark the
+  // per-ad and per-objective figures built on them while any are estimated.
+  {
+    why: 'Objective tables: hook rate column marked when estimated',
+    find: 'M(`hook`,`Hook rate`,`pct`)',
+    replace: 'M(`hook`,`Hook rate`+(window.__harkV3Est?`*`:``),`pct`)',
+    count: 3,
+  },
+  {
+    why: 'Objective tables: hold rate column marked when estimated',
+    find: 'M(`hold`,`Hold rate`,`pct`)',
+    replace: 'M(`hold`,`Hold rate`+(window.__harkV3Est?`*`:``),`pct`)',
+    count: 2,
+  },
+  {
+    why: 'Objective tables: 3-second plays column marked when estimated',
+    find: 'M(`v3`,`3-sec plays`,`count`)',
+    replace: 'M(`v3`,`3-sec plays`+(window.__harkV3Est?`*`:``),`count`)',
+  },
+  {
+    why: 'Objective tables: cost per 1K 3-second plays marked when estimated',
+    find: 'M(`cpkv3`,`Cost / 1K 3-sec plays`,`money`)',
+    replace: 'M(`cpkv3`,`Cost / 1K 3-sec plays`+(window.__harkV3Est?`*`:``),`money`)',
+  },
+  {
+    why: 'Objective tables: footnote explains the estimate',
+    find: '`Hook rate = 3-second plays ÷ impressions. Hold rate = 95% plays ÷ 3-second plays.${tr?',
+    replace:
+      '`Hook rate = 3-second plays ÷ impressions. Hold rate = 95% plays ÷ 3-second plays.${window.__harkV3Est?` * Estimated: Shadow has 3-second plays only as a daily total for all of Meta, so each ad gets a share in proportion to its early video retention (2 × 25% views − 50% views). Totals for all of Meta are exact.`:``}${tr?',
+  },
+  {
+    why: 'By-objective table: hook and hold columns marked when estimated (its Total row is exact)',
+    find: '{key:`hook`,label:`Hook rate`,value:e=>e.hook,format:`pct`,num:!0},{key:`hold`,label:`Hold rate`,value:e=>e.hold,format:`pct`,num:!0}],ft={',
+    replace:
+      '{key:`hook`,label:`Hook rate`+(window.__harkV3Est?`*`:``),value:e=>e.hook,format:`pct`,num:!0},{key:`hold`,label:`Hold rate`+(window.__harkV3Est?`*`:``),value:e=>e.hold,format:`pct`,num:!0}],ft={',
+  },
+  {
+    why: 'Hook rate by creative: subtitle says the per-ad values are estimated',
+    find: 'subtitle:`3-second video plays ÷ impressions. Comparable across objectives.`',
+    replace:
+      'subtitle:`3-second video plays ÷ impressions. Comparable across objectives.`+(window.__harkV3Est?` Estimated per ad from the daily total for all of Meta, split by early video retention.`:``)',
+  },
+  {
+    why: 'Hook rate by creative: table column marked when estimated',
+    find: '{key:`hook`,label:`Hook rate`,value:e=>e.hook,format:`pct`,num:!0}]})})]})',
+    replace:
+      '{key:`hook`,label:`Hook rate`+(window.__harkV3Est?`*`:``),value:e=>e.hook,format:`pct`,num:!0}]})})]})',
+  },
+  // Values Shadow does not have stay "—" instead of being summed as 0.
+  {
+    why: 'Meta shares, saves and comments read — when no row has them',
+    find: 'dy.add(r.date)}let d=(a,b)=>b>0?a/b:null;return{...s,rt:[...rt],',
+    replace:
+      'dy.add(r.date)}for(let k of[`shares`,`saves`,`comments`])e.some(r=>(r.meta||{})[k]!=null)||(s[k]=null);let d=(a,b)=>a!=null&&b>0?a/b:null;return{...s,rt:[...rt],',
+  },
+  {
+    why: 'High Impact reach and engagements read — when a TikTok row lacks them (Masthead never had reach)',
+    find: 'dy.add(r.date)}let d=(a,b)=>b>0?a/b:null;return{...s,days:dy.size,cpm:d(s.spend*1e3,s.impressions),ctr:d(s.clicks,s.impressions),cpc:d(s.spend,s.clicks),freq:',
+    replace:
+      'dy.add(r.date)}e.some(r=>/TikTok/.test(r.platform||``)&&r.reach==null)&&(s.reach=null);e.some(r=>/TikTok/.test(r.platform||``)&&r.eng==null)&&(s.eng=null);let d=(a,b)=>a!=null&&b>0?a/b:null;return{...s,days:dy.size,cpm:d(s.spend*1e3,s.impressions),ctr:d(s.clicks,s.impressions),cpc:d(s.spend,s.clicks),freq:',
+  },
+  {
+    why: 'TikTok reach and engagements read — when a row lacks them (reach of multi-ad campaigns)',
+    find: 'dy.add(r.date)}let d=(a,b)=>b>0?a/b:null;return{...s,days:dy.size,cpm:d(s.spend*1e3,s.impressions),ctr:d(s.clicks,s.impressions),cpc:d(s.spend,s.clicks),vcr:vn?vw/vn:null,v6r:',
+    replace:
+      'dy.add(r.date)}e.some(r=>/TikTok/.test(r.platform||``)&&r.reach==null)&&(s.reach=null);e.some(r=>/TikTok/.test(r.platform||``)&&r.eng==null)&&(s.eng=null);let d=(a,b)=>a!=null&&b>0?a/b:null;return{...s,days:dy.size,cpm:d(s.spend*1e3,s.impressions),ctr:d(s.clicks,s.impressions),cpc:d(s.spend,s.clicks),vcr:vn?vw/vn:null,v6r:',
   },
   // Custom date range picker (artifact/range-picker.js).
   {
@@ -224,9 +293,10 @@ const REFRESHING_CARD =
   ']})})}';
 
 function replaceOnce(src: string, p: Patch): string {
+  const want = p.count ?? 1;
   const n = src.split(p.find).length - 1;
-  if (n !== 1) throw new Error(`Patch "${p.why}" matched ${n} times (expected 1)`);
-  return src.replace(p.find, () => p.replace);
+  if (n !== want) throw new Error(`Patch "${p.why}" matched ${n} times (expected ${want})`);
+  return src.split(p.find).join(p.replace);
 }
 
 function between(src: string, start: string, end: string, from = 0): { start: number; end: number } {
