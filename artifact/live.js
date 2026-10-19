@@ -1,11 +1,11 @@
 /*
- * Live layer for the Hark dashboard artifact.
+ * Data layer for the Hark dashboard artifact: everything comes from Shadow.
  *
- * The page ships the Oct 19 export (reference/data/uploads.json) and the original React
- * build unchanged in behaviour. When the viewer has the Shadow connector, this script pulls
- * Google Ads, Meta and TikTok from Shadow's query_data tool, maps the rows into the
- * dashboard's own Dataset shape, keeps every exported day as it is, adds the closed days
- * after the export, and hands the result to the app through window.__harkSet.
+ * The page carries no exported data. It pulls Google Ads, Meta and TikTok from the viewer's
+ * Shadow connector (query_data), maps the rows into the dashboard's own Dataset shape, and
+ * hands the result to the app through window.__harkSet. History is fetched from HISTORY_START
+ * in calendar-month chunks; the chunk that holds the last 14 days refreshes every 2 hours,
+ * because Shadow re-syncs about 7 days back each hour and late conversions land.
  *
  * Field names below are the ones observed in Shadow responses (docs/shadow-fields.md).
  * The pure helpers are exposed as HarkLive for the tests; boot() runs only in a viewer.
@@ -16,8 +16,9 @@
   var SERVER = 'Shadow';
   var TOOL = 'query_data';
   var WORKSPACE = 'Hark';
-  var WINDOW_DAYS = 14; // Shadow re-syncs about 7 days back; late conversions land
-  var CHUNK_DAYS = 14;
+  // The program's first day; the dashboard never shows a range before it.
+  var HISTORY_START = '2026-10-01';
+  var RECENT_DAYS = 14; // Shadow re-syncs about 7 days back; late conversions land
   var REFRESH_MS = 2 * 60 * 60 * 1000;
   // A day counts as closed once it has ended in the westernmost US time zone.
   var CLOSE_TZ = 'America/Los_Angeles';
@@ -401,256 +402,118 @@
     });
   }
 
-  // ---- Merge (Code.gs mergeDatasets_) and the live dataset ------------------------------------
+  // ---- Dataset ---------------------------------------------------------------------------------
 
   function byDate(x, y) {
     return x.date < y.date ? -1 : x.date > y.date ? 1 : 0;
   }
 
-  function mergeDatasets(a, b) {
-    var rk = {};
-    b.rows.forEach(function (r) {
-      rk[r.channel + '|' + r.date] = 1;
-    });
-    var kk = {};
-    b.keywords.forEach(function (k) {
-      kk[(k.adGroupId || k.adGroup) + '|' + k.date] = 1;
-    });
-    var seen = {};
-    var sources = [];
-    (a.sources || []).concat(b.sources || []).forEach(function (s) {
-      var k = JSON.stringify(s);
-      if (!seen[k]) {
-        seen[k] = 1;
-        sources.push(s);
-      }
-    });
-    return {
-      generatedAt: b.generatedAt || a.generatedAt,
-      rows: a.rows
-        .filter(function (r) {
-          return !rk[r.channel + '|' + r.date];
-        })
-        .concat(b.rows)
-        .sort(byDate),
-      keywords: a.keywords
-        .filter(function (k) {
-          return !kk[(k.adGroupId || k.adGroup) + '|' + k.date];
-        })
-        .concat(b.keywords)
-        .sort(byDate),
-      sources: sources,
-      warnings: b.warnings || [],
-    };
-  }
-
-  function lastDateByChannel(ds) {
-    var last = {};
-    ds.rows.forEach(function (r) {
-      if (!last[r.channel] || r.date > last[r.channel]) last[r.channel] = r.date;
-    });
-    return last;
-  }
-
-  /** The days to ask Shadow for: the rolling window, reaching back to the day after the export. */
-  function liveWindow(seed, now) {
+  /** Closed days to ask for: HISTORY_START → yesterday (Los Angeles), in calendar months. */
+  function historyChunks(now) {
     var to = addDays(todayIn(CLOSE_TZ, now), -1);
-    var last = lastDateByChannel(seed);
-    var exportEnd = ['google', 'search', 'meta', 'tiktok', 'hi'].reduce(function (m, ch) {
-      return last[ch] && (!m || last[ch] < m) ? last[ch] : m;
-    }, null);
-    var from = addDays(to, -(WINDOW_DAYS - 1));
-    if (exportEnd && addDays(exportEnd, 1) < from) from = addDays(exportEnd, 1);
     var chunks = [];
-    for (var s = from; s <= to; s = addDays(s, CHUNK_DAYS)) {
-      var e = addDays(s, CHUNK_DAYS - 1);
-      chunks.push({ from: s, to: e < to ? e : to });
+    if (to < HISTORY_START) return { from: HISTORY_START, to: to, chunks: chunks };
+    var recentFrom = addDays(to, -(RECENT_DAYS - 1));
+    for (var s = HISTORY_START; s <= to;) {
+      var next = addDays(s.slice(0, 7) + '-28', 4).slice(0, 7) + '-01'; // first of next month
+      var end = addDays(next, -1);
+      if (end > to) end = to;
+      chunks.push({ from: s, to: end, recent: end >= recentFrom });
+      s = next;
     }
-    return { from: from, to: to, chunks: chunks };
+    return { from: HISTORY_START, to: to, chunks: chunks };
   }
 
   var SOURCE_INFO = {
-    google: {
-      file: 'Shadow · Google Ads',
-      sheet: 'google_ads · campaigns (live)',
-      kind: 'google-adgroups',
-      owns: function (r) {
-        return r.channel === 'google' || r.channel === 'search' || r.platform === 'YouTube Masthead';
-      },
-    },
-    meta: {
-      file: 'Shadow · Meta',
-      sheet: 'meta_ads · ads (live)',
-      kind: 'meta-ads',
-      owns: function (r) {
-        return r.channel === 'meta';
-      },
-    },
-    tiktok: {
-      file: 'Shadow · TikTok',
-      sheet: 'tiktok_ads · campaigns (live)',
-      kind: 'tiktok',
-      owns: function (r) {
-        return r.channel === 'tiktok' || r.platform === 'TikTok TopView';
-      },
-    },
+    google: { file: 'Google Ads', sheet: 'google_ads · campaigns', kind: 'google-adgroups' },
+    meta: { file: 'Meta', sheet: 'meta_ads · ads', kind: 'meta-ads' },
+    tiktok: { file: 'TikTok', sheet: 'tiktok_ads · campaigns', kind: 'tiktok' },
   };
 
   /**
-   * seed: the exported Dataset. live: {google, meta, tiktok} each {rows} when loaded, or
-   * {error} / undefined. Exported days stay as exported; Shadow adds the days after them.
+   * live: {google, meta, tiktok}, each {rows, truncated?} once loaded, {error} when it failed,
+   * or undefined while loading. Returns the Dataset the app renders, from Shadow alone.
    */
-  function buildLiveDataset(seed, live, now) {
-    var last = lastDateByChannel(seed);
-    var ok = function (id) {
-      return live[id] && Array.isArray(live[id].rows);
-    };
-    var newRows = [];
+  function buildDataset(live, pulledAt) {
+    var rows = [];
     var sources = [];
-    var added = {};
+    var warnings = [];
+    var when = pulledAt ? ' Pulled ' + timeLabel(pulledAt) + '.' : '';
+    var firsts = [];
 
     Object.keys(SOURCE_INFO).forEach(function (id) {
       var info = SOURCE_INFO[id];
-      if (!ok(id)) {
-        if (live[id] && live[id].error)
-          sources.push({
-            file: info.file,
-            origin: 'shadow',
-            sheets: [
-              {
-                sheet: info.sheet,
-                kind: info.kind,
-                dates: [],
-                rows: 0,
-                reconciled: null,
-                note: 'Could not load: ' + live[id].error,
-              },
-            ],
-          });
-        return;
+      var src = live[id];
+      var sheet = { sheet: info.sheet, kind: info.kind, dates: [], rows: 0, reconciled: null, note: null };
+      if (src && Array.isArray(src.rows)) {
+        rows = rows.concat(src.rows);
+        sheet.dates = Array.from(
+          new Set(
+            src.rows.map(function (r) {
+              return r.date;
+            }),
+          ),
+        ).sort();
+        sheet.rows = src.rows.length;
+        sheet.note = (src.truncated ? 'Partial answer: some rows may be missing.' : 'Up to date.') + when;
+        if (sheet.dates.length) firsts.push(info.file + ' from ' + fmtDay(sheet.dates[0]));
+        if (src.truncated)
+          warnings.push(info.file + ': Shadow sent a partial answer, so some rows may be missing.');
+      } else if (src && src.error) {
+        sheet.note = 'Could not load: ' + src.error;
+        warnings.push(
+          info.file + ' could not load from Shadow (' + src.error + '). Its views are empty until it does.',
+        );
+      } else {
+        sheet.note = 'Loading…';
       }
-      var rows = live[id].rows;
-      var fresh = rows.filter(function (r) {
-        // High Impact mixes Google (Masthead) and TikTok (TopView): add a day only when both load.
-        if (r.channel === 'hi' && !(ok('google') && ok('tiktok'))) return false;
-        return !last[r.channel] || r.date > last[r.channel];
-      });
-      newRows = newRows.concat(fresh);
-      var dates = Array.from(
-        new Set(
-          fresh.map(function (r) {
-            return r.date;
-          }),
-        ),
-      ).sort();
-      added[id] = dates;
-
-      // Check Shadow against the export on the days both cover.
-      var shared = new Set(
-        rows
-          .filter(function (r) {
-            return last[r.channel] && r.date <= last[r.channel];
-          })
-          .map(function (r) {
-            return r.date;
-          }),
-      );
-      var sum = function (list) {
-        return list.reduce(function (t, r) {
-          return t + (r.spend || 0);
-        }, 0);
-      };
-      var shadowSpend = sum(
-        rows.filter(function (r) {
-          return shared.has(r.date);
-        }),
-      );
-      var exportSpend = sum(
-        seed.rows.filter(function (r) {
-          return info.owns(r) && shared.has(r.date);
-        }),
-      );
-      var reconciled =
-        shared.size && exportSpend > 0 ? Math.abs(shadowSpend - exportSpend) / exportSpend <= 0.01 : null;
-      var sharedDays = Array.from(shared).sort();
-      sources.push({
-        file: info.file,
-        origin: 'shadow',
-        sheets: [
-          {
-            sheet: info.sheet,
-            kind: info.kind,
-            dates: dates,
-            rows: fresh.length,
-            reconciled: reconciled,
-            note: sharedDays.length
-              ? 'Spend on ' +
-                fmtDay(sharedDays[0]) +
-                '–' +
-                fmtDay(sharedDays[sharedDays.length - 1]) +
-                ' is ' +
-                (exportSpend > 0 ? ((100 * (shadowSpend - exportSpend)) / exportSpend).toFixed(1) : '—') +
-                '% vs the export'
-              : null,
-          },
-        ],
-      });
+      sources.push({ file: info.file, origin: 'shadow', sheets: [sheet] });
     });
 
-    var warnings = [];
-    var anyNew = newRows.length > 0;
-    if (anyNew) {
-      var newest = newRows.reduce(function (m, r) {
-        return r.date > m ? r.date : m;
-      }, '');
-      if (last.apple && newest > last.apple)
-        warnings.push(
-          'Apple Search Ads has no live source yet (Shadow syncs it but cannot serve it to this page), so Apple stops at ' +
-            fmtDay(last.apple) +
-            ', the last export.',
-        );
-      if (
-        newRows.some(function (r) {
-          return r.channel === 'search';
-        })
-      )
-        warnings.push(
-          'Google Search installs are not in Shadow (only all conversions), so Search days after the export show no installs.',
-        );
-      if (
-        newRows.some(function (r) {
-          return r.channel === 'meta';
-        })
-      )
-        warnings.push(
-          'Meta 3-second plays, shares, saves and comments are not in Shadow per ad, so hook and hold rate use only exported days.',
-        );
-      if (
-        newRows.some(function (r) {
-          return (r.channel === 'tiktok' || r.platform === 'TikTok TopView') && r.reach == null;
-        })
-      )
-        warnings.push(
-          'TikTok reach and frequency for multi-ad campaigns, and custom engagements, are not in Shadow; they are blank after the export.',
-        );
-    }
-    Object.keys(SOURCE_INFO).forEach(function (id) {
-      if (live[id] && live[id].error)
-        warnings.push(
-          SOURCE_INFO[id].file + ' could not load (' + live[id].error + '); its exported days still show.',
-        );
-      if (live[id] && live[id].truncated)
-        warnings.push(SOURCE_INFO[id].file + ' sent a partial answer; some recent rows may be missing.');
-    });
+    warnings.unshift(
+      'Apple Search Ads is not available: Shadow syncs it, but its data tool does not serve Apple yet, so the Apple views are empty.',
+    );
+    if (
+      rows.some(function (r) {
+        return r.channel === 'search';
+      })
+    )
+      warnings.push(
+        'Google Search installs are not in Shadow (it has only all conversions), so Search shows no installs or CPA. Spend, clicks and impressions are complete.',
+      );
+    if (
+      rows.some(function (r) {
+        return r.channel === 'meta';
+      })
+    )
+      warnings.push(
+        'Meta 3-second plays, shares, saves and comments are not in Shadow per ad, so hook rate, hold rate and cost per 3-second play show —.',
+      );
+    if (
+      rows.some(function (r) {
+        return (r.channel === 'tiktok' || r.platform === 'TikTok TopView') && r.reach == null;
+      })
+    )
+      warnings.push(
+        'TikTok reach and frequency for campaigns with more than one ad, and custom engagements, are not in Shadow.',
+      );
+    if (firsts.length) warnings.push('Shadow history starts: ' + firsts.join(', ') + '.');
 
-    var ds = mergeDatasets(seed, {
-      generatedAt: (now || new Date()).toISOString(),
-      rows: newRows,
+    return {
+      generatedAt: new Date(pulledAt || Date.now()).toISOString(),
+      rows: rows.sort(byDate),
       keywords: [],
       sources: sources,
       warnings: warnings,
-    });
-    return { dataset: ds, added: added };
+    };
+  }
+
+  function timeLabel(ms) {
+    try {
+      return new Date(ms).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
+    } catch {
+      return '';
+    }
   }
 
   var api = {
@@ -663,9 +526,8 @@
     mapGoogle: mapGoogle,
     mapMeta: mapMeta,
     mapTikTok: mapTikTok,
-    mergeDatasets: mergeDatasets,
-    liveWindow: liveWindow,
-    buildLiveDataset: buildLiveDataset,
+    historyChunks: historyChunks,
+    buildDataset: buildDataset,
     addDays: addDays,
   };
   root.HarkLive = api;
@@ -674,22 +536,16 @@
 
   if (typeof window === 'undefined' || !window.claude || typeof window.claude.use !== 'function') return;
 
-  var seed = window.__harkSeed;
-  var exportLabel = window.__harkExportLabel || 'the export';
-  var exportPill = window.__harkExportPill || '';
-  var state = { status: 'starting', error: null, pulledAt: null, bodies: {}, sourceErrors: {} };
+  var state = { status: 'starting', pulledAt: null, bodies: {}, errors: {} };
+  var win = null;
+  var mcp = null;
+  var unsubs = [];
 
-  function setText(pill, footer) {
+  /** The empty-state message, header pill and footer line the patched bundle reads. */
+  function setText(empty, pill, footer) {
+    window.__harkEmpty = empty;
     window.__harkPill = pill;
     window.__harkFooter = footer;
-  }
-
-  function timeLabel(ms) {
-    try {
-      return new Date(ms).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
-    } catch {
-      return '';
-    }
   }
 
   var pushTimer = null;
@@ -697,43 +553,44 @@
     if (pushTimer) return;
     pushTimer = setTimeout(function () {
       pushTimer = null;
-      if (typeof window.__harkSet !== 'function') {
-        push();
-        return;
-      }
+      if (typeof window.__harkSet !== 'function') return push();
       window.__harkSet(currentDataset());
     }, 30);
+  }
+
+  var EMPTY = { generatedAt: null, rows: [], keywords: [], sources: [], warnings: [] };
+
+  function sourceOf(key) {
+    var q = key.split('|')[0];
+    return q === 'searchCampaigns' ? 'google' : q;
   }
 
   function liveFromBodies() {
     var out = {};
     var b = state.bodies;
-    var searchIds = new Set();
-    var allIn = function (key) {
-      return win.chunks.every(function (c) {
-        return b[key + '|' + c.from];
+    var keysFor = function (q) {
+      return q === 'searchCampaigns'
+        ? ['searchCampaigns|all']
+        : win.chunks.map(function (c) {
+            return q + '|' + c.from;
+          });
+    };
+    var have = function (q) {
+      return keysFor(q).every(function (k) {
+        return b[k];
       });
     };
-    win.chunks.forEach(function (c) {
-      var s = b['searchCampaigns|' + c.from];
-      if (s)
-        searchIdSet(s).forEach(function (id) {
-          searchIds.add(id);
-        });
-    });
     ['google', 'meta', 'tiktok'].forEach(function (id) {
-      if (state.sourceErrors[id]) {
-        out[id] = { error: state.sourceErrors[id] };
-        return;
-      }
-      if (!allIn(id) || (id === 'google' && !allIn('searchCampaigns'))) return;
+      if (state.errors[id]) return void (out[id] = { error: state.errors[id] });
+      if (!have(id) || (id === 'google' && !have('searchCampaigns'))) return;
+      var ids = id === 'google' ? searchIdSet(b['searchCampaigns|all']) : null;
       var rows = [];
       var truncated = false;
-      win.chunks.forEach(function (c) {
-        var body = b[id + '|' + c.from];
+      keysFor(id).forEach(function (k) {
+        var body = b[k];
         if (body.page && body.page.truncated) truncated = true;
         rows = rows.concat(
-          id === 'google' ? mapGoogle(body, searchIds) : id === 'meta' ? mapMeta(body) : mapTikTok(body),
+          id === 'google' ? mapGoogle(body, ids) : id === 'meta' ? mapMeta(body) : mapTikTok(body),
         );
       });
       out[id] = { rows: rows, truncated: truncated };
@@ -742,26 +599,31 @@
   }
 
   function currentDataset() {
-    if (!seed) return null;
-    if (state.status !== 'live')
-      return mergeDatasets(seed, { rows: [], keywords: [], sources: [], warnings: [] });
-    var built = buildLiveDataset(seed, liveFromBodies(), new Date());
-    var addedDays = Object.keys(built.added).reduce(function (n, k) {
-      return n + built.added[k].length;
-    }, 0);
+    if (state.status !== 'live') return Object.assign({}, EMPTY);
+    var live = liveFromBodies();
+    var loading = Object.keys(SOURCE_INFO).filter(function (id) {
+      return !live[id];
+    });
+    var failed = Object.keys(SOURCE_INFO).filter(function (id) {
+      return live[id] && live[id].error;
+    });
     var t = timeLabel(state.pulledAt);
-    var failed = Object.keys(state.sourceErrors);
+    var names = function (ids) {
+      return ids
+        .map(function (id) {
+          return SOURCE_INFO[id].file;
+        })
+        .join(', ');
+    };
     setText(
+      loading.length ? 'Loading data from Shadow…' : 'Shadow has no data for this dashboard yet.',
       ' · refreshed ' + t,
-      'Live from Shadow: Google Ads, Meta and TikTok, refreshed ' +
-        t +
-        (addedDays ? '' : ' (no closed days after ' + exportLabel + ' yet)') +
-        (failed.length ? '. ' + failed.join(', ') + ' could not load' : '') +
-        '. Apple Search Ads and earlier days come from ' +
-        exportLabel +
-        '.',
+      'Live from Shadow' +
+        (loading.length ? '. Still loading: ' + names(loading) : ', refreshed ' + t) +
+        (failed.length ? '. Could not load: ' + names(failed) : '') +
+        '. Apple Search Ads is not available from Shadow yet.',
     );
-    return built.dataset;
+    return buildDataset(live, state.pulledAt);
   }
 
   function showNotice(text, button) {
@@ -782,33 +644,33 @@
   }
 
   var DENIALS = {
-    needs_reauth: 'Reconnect Shadow in claude.ai Settings → Connectors to load live data.',
-    server_not_connected: 'Add the Shadow connector in claude.ai Settings → Connectors to load live data.',
-    selection_required: 'Choose which Shadow connection this page should use to load live data.',
+    needs_reauth: 'Reconnect Shadow in claude.ai Settings → Connectors to load this dashboard.',
+    server_not_connected:
+      'This dashboard loads from Shadow. Add the Shadow connector in claude.ai Settings → Connectors.',
+    selection_required: 'Choose which Shadow connection this page should use.',
     blocked_by_policy: "Your organization's policy blocks Shadow for this page.",
     not_in_manifest:
-      'Shadow is turned off for this page. Turn it on in the page’s Permissions to load live data.',
-    consent_required: 'Allow Shadow for this page to load live data.',
+      'Shadow is turned off for this page. Turn it on in the page’s Permissions to load the data.',
+    consent_required: 'Allow Shadow for this page to load the data.',
   };
-
-  var win = null;
-  var mcp = null;
-  var unsubs = [];
 
   function onError(key, err) {
     var code = (err && err.code) || 'upstream_error';
-    var source = key.split('|')[0];
     if (code === 'approval_required') {
+      if (state.status === 'live') return;
       state.status = 'approval';
-      setText(exportPill, 'Showing ' + exportLabel + '. Live data from Shadow needs your OK.');
-      showNotice('Live data from Shadow needs your OK.', { label: 'Load live data', onClick: loadOnce });
+      setText('This dashboard loads from Shadow and needs your OK.', '', '');
+      showNotice('This dashboard loads from Shadow and needs your OK.', {
+        label: 'Load data',
+        onClick: loadOnce,
+      });
     } else if (DENIALS[code]) {
-      // Authorization problems retract live data.
+      // Authorization problems retract what was shown.
       state.status = 'denied';
       state.bodies = {};
-      setText(exportPill, 'Showing ' + exportLabel + '. ' + DENIALS[code]);
+      setText(DENIALS[code], '', '');
     } else if (code === 'bad_request' && !state.fellBack) {
-      // An older viewer without watch support: fall back to one-off calls.
+      // A viewer without watch support: fall back to one-off calls on a timer.
       state.fellBack = true;
       unsubs.forEach(function (u) {
         u();
@@ -818,9 +680,9 @@
       setInterval(loadOnce, REFRESH_MS);
       return;
     } else if (!state.bodies[key]) {
-      // Transient failure with nothing to show yet for this part: report it, keep the rest.
-      state.sourceErrors[source === 'searchCampaigns' ? 'google' : source] = (err && err.message) || code;
-      if (state.status !== 'live') state.status = 'live';
+      // Transient failure with nothing shown yet for this part; keep the rest of the page.
+      state.errors[sourceOf(key)] = (err && err.message) || code;
+      state.status = 'live';
       if (!state.pulledAt) state.pulledAt = Date.now();
     }
     push();
@@ -835,7 +697,7 @@
       return;
     }
     state.bodies[key] = body;
-    delete state.sourceErrors[key.split('|')[0] === 'searchCampaigns' ? 'google' : key.split('|')[0]];
+    delete state.errors[sourceOf(key)];
     state.status = 'live';
     var stamp = result && result.cache && result.cache.storedAt ? result.cache.storedAt : Date.now();
     state.pulledAt = state.pulledAt ? Math.max(state.pulledAt, stamp) : stamp;
@@ -843,31 +705,32 @@
     push();
   }
 
+  /** Every call the page makes: three per month of history plus one list of Search campaigns. */
   function eachQuery(fn) {
-    Object.keys(QUERIES).forEach(function (name) {
+    fn('searchCampaigns|all', QUERIES.searchCampaigns(win.from, win.to), true);
+    ['google', 'meta', 'tiktok'].forEach(function (name) {
       win.chunks.forEach(function (c) {
-        fn(name + '|' + c.from, QUERIES[name](c.from, c.to));
+        fn(name + '|' + c.from, QUERIES[name](c.from, c.to), c.recent);
       });
     });
   }
 
+  var CACHE = { staleTime: 5 * 60 * 1000, gcTime: 24 * 60 * 60 * 1000 };
+
   function loadOnce() {
     eachQuery(function (key, input) {
-      mcp
-        .callTool(SERVER, TOOL, input, { cache: { staleTime: 5 * 60 * 1000, gcTime: 24 * 60 * 60 * 1000 } })
-        .then(
-          function (r) {
-            onData(key, r);
-          },
-          function (e) {
-            onError(key, e);
-          },
-        );
+      mcp.callTool(SERVER, TOOL, input, { cache: CACHE }).then(
+        function (r) {
+          onData(key, r);
+        },
+        function (e) {
+          onError(key, e);
+        },
+      );
     });
   }
 
   function boot() {
-    if (!seed) return;
     window.claude
       .use('downloads')
       .then(function (d) {
@@ -882,20 +745,16 @@
       .use('mcp')
       .then(function (m) {
         if (!m) {
-          setText(
-            exportPill,
-            'Showing ' +
-              exportLabel +
-              '. Live data loads for viewers who have the Shadow connector in claude.ai.',
-          );
+          var msg = 'This dashboard loads from Shadow. Open it in claude.ai with the Shadow connector added.';
+          setText(msg, '', '');
           push();
           return;
         }
         mcp = m;
-        win = liveWindow(seed, new Date());
-        setText(exportPill, 'Loading live data from Shadow…');
+        win = historyChunks(new Date());
+        setText('Loading data from Shadow…', '', '');
         push();
-        eachQuery(function (key, input) {
+        eachQuery(function (key, input, recent) {
           unsubs.push(
             mcp.watchTool(
               SERVER,
@@ -905,10 +764,7 @@
                 if (ev.type === 'data') onData(key, ev.result);
                 else onError(key, ev.error);
               },
-              {
-                cache: { staleTime: 5 * 60 * 1000, gcTime: 24 * 60 * 60 * 1000 },
-                refetchInterval: REFRESH_MS,
-              },
+              recent ? { cache: CACHE, refetchInterval: REFRESH_MS } : { cache: CACHE },
             ),
           );
         });

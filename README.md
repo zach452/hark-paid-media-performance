@@ -6,17 +6,16 @@ Darkroom's client dashboard for Hark (Hark Pro, US). It's a Next.js port of the 
 
 ## Claude artifact (live from Shadow)
 
-A version that needs no hosting: the original dashboard build, published as a claude.ai artifact. It calls the viewer's own Shadow connector, with no server or tokens.
+A version that needs no hosting: the original dashboard build, published as a claude.ai artifact. Every number comes from the viewer's own Shadow connector; the page carries no exported data, and there is no server and no tokens.
 
-- **What it shows:** the Oct 19 export as the base. For viewers with the Shadow connector, Google Ads, Meta and TikTok load live (rolling 14 days, refreshed every 2 hours). Exported days stay as exported, and Shadow adds the closed days after them. Apple Search Ads stays on the export until Shadow can serve it.
-- **Gaps:** live days carry the gaps in `docs/gaps.md`: no Search installs, no Meta 3-second plays, no multi-ad TikTok reach. The page lists them under Data & methodology → Source health.
-- **Who can see it:** declaring a connector means it can't be shared by public link. Viewers without Shadow see the export.
-- **Date range picker:** "Custom" opens a calendar with quick ranges, typed dates and per-day coverage dots. The comparison can be the previous period, any custom range, or off, and the picker warns when the comparison has no spend for a channel or a different length. Code: `artifact/range-picker.js`.
-- **Code:** `artifact/live.js` is the live layer. `scripts/build-artifact.ts` assembles the page and applies the bundle patches as exact-match replacements.
+- **Data:** Google Ads (App, Search, YouTube Masthead), Meta and TikTok from Shadow `query_data`, from Oct 1 to yesterday in calendar-month calls. The month holding the last 14 days refreshes every 2 hours. Days start where Shadow's history starts (Google Oct 6, TikTok Oct 12, Meta Oct 14).
+- **Not available from Shadow yet:** Apple Search Ads (synced, but `query_data` has no Apple platform), Search installs (only all conversions exist), Meta per-ad 3-second plays, TikTok multi-ad reach. Data & methodology → Source health lists them. Once Shadow exposes a field, add it to the mapper in `artifact/live.js` from an observed response (`docs/shadow-fields.md`).
+- **Who can see it:** viewers need the Shadow connector. A page that declares a connector can't be shared by public link.
+- **Date range picker:** "Custom" opens a calendar with quick ranges, typed dates and per-day coverage dots. The comparison can be the previous period, any custom range, or off (`artifact/range-picker.js`).
+- **Code:** `artifact/live.js` is the data layer. `scripts/build-artifact.ts` assembles the page from the original build and applies the bundle patches as exact-match replacements.
 
 ```bash
 npm run artifact:build    # → artifact/dist/hark-paid-media.html (then publish it with the Artifact tool)
-npm run artifact:parity   # every tab's text vs the reference; only intended copy may differ
 ```
 
 ## Layout

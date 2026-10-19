@@ -19,8 +19,7 @@
     "reference:serve": "tsx scripts/serve-reference.ts",
     "reference:screens": "tsx scripts/capture-reference.ts",
     "shadow:probe": "tsx scripts/shadow-probe.ts",
-    "artifact:build": "tsx scripts/build-artifact.ts",
-    "artifact:parity": "tsx scripts/artifact-parity.ts"
+    "artifact:build": "tsx scripts/build-artifact.ts"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.32.1",

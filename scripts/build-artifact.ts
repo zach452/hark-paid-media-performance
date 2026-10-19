@@ -1,7 +1,7 @@
 /**
- * Builds the Claude artifact: the original dashboard build (reference/app/Index.html) with the
- * Oct 19 export inlined and artifact/live.js added, so viewers with the Shadow connector see
- * live Google Ads, Meta and TikTok days.
+ * Builds the Claude artifact: the original dashboard build (reference/app/Index.html) with its
+ * data layer replaced. The page carries no exported data; artifact/live.js loads everything
+ * from the viewer's Shadow connector.
  *
  *   npm run artifact:build      # → artifact/dist/hark-paid-media.html
  *
@@ -72,8 +72,7 @@ const BUNDLE_PATCHES: Patch[] = [
   {
     why: 'Glossary: Google clicks',
     find: '`Implied as Conversions ÷ Conv. rate — the ad group export has no click or impression columns.`',
-    replace:
-      '`As Google Ads reports them. The first ad group exports had no click column, so clicks were implied as Conversions ÷ Conv. rate; no current data uses that.`',
+    replace: '`As Google Ads reports them, through Shadow.`',
   },
   {
     why: 'Google App KPI tile',
@@ -94,20 +93,18 @@ const BUNDLE_PATCHES: Patch[] = [
   {
     why: 'Glossary: time zone',
     find: "`As exported: Apple reports in UTC; Google in the ad account's time zone.`",
-    replace:
-      "`As exported: Apple reports in UTC; Google in the ad account's time zone. Days from Shadow use each ad account's own reporting day.`",
+    replace: "`Each ad account's own reporting day, as Shadow stores it.`",
   },
   {
     why: 'Source files → source health',
     find: '{title:`Source files`,subtitle:`Last refreshed ${new Date(e.generatedAt).toLocaleString()}. Each platform export is checked against its own Total row.`,',
     replace:
-      '{title:`Source health`,subtitle:`Exports are checked against their own Total row. Shadow pulls are checked against the export on the days both cover.`,',
+      '{title:`Source health`,subtitle:`Each Shadow source, the days it covers and when it was last pulled.`,',
   },
   {
     why: 'Coverage by day subtitle',
     find: "subtitle:`What each day's numbers are built from. Gaps mean an export hasn't been added yet.`",
-    replace:
-      "subtitle:`What each day's numbers are built from. Gaps mean no source has data for that day yet.`",
+    replace: "subtitle:`What each day's numbers are built from. Gaps mean Shadow has no data for that day.`",
   },
   {
     why: '"Refreshing the data" now describes the live source, so every viewer gets it (it was team-only)',
@@ -161,18 +158,69 @@ const BUNDLE_PATCHES: Patch[] = [
       'onChange:e=>o(e.target.checked)}),window.__harkDash?.cmpCustom?`Compare to custom range`:`Compare to previous period`]',
   },
   {
-    why: 'Empty state copy',
+    why: 'Empty state says what is happening with Shadow (loading, no connector, no access)',
     find: '`Performance data for this dashboard is being refreshed. Please check back shortly.`',
-    replace: '`Performance data for this dashboard is loading. Please check back shortly.`',
+    replace: '(window.__harkEmpty??`Loading data from Shadow…`)',
+  },
+  {
+    why: 'Source health columns describe Shadow sources',
+    find: '{key:`file`,label:`File`,',
+    replace: '{key:`file`,label:`Source`,',
+  },
+  {
+    why: 'Source health: table column',
+    find: '{key:`sheet`,label:`Sheet`,',
+    replace: '{key:`sheet`,label:`Shadow table`,',
+  },
+  {
+    why: 'Source health: feeds column',
+    find: '{key:`kind`,label:`Recognised as`,',
+    replace: '{key:`kind`,label:`Feeds`,',
+  },
+  {
+    why: 'Source health: days column',
+    find: '{key:`dates`,label:`Date`,value:e=>e.dates.join(`, `),render:e=>NG(e)},',
+    replace: '{key:`dates`,label:`Days`,value:e=>e.dates.join(`, `),render:e=>NG(e)},',
+  },
+  {
+    why: 'Source health: no export to tie out against',
+    find: '{key:`rec`,label:`Ties to export total`,value:e=>e.reconciled===null?``:e.reconciled?`yes`:`no`,render:e=>e.reconciled===null?(0,H.jsx)(`span`,{className:`cell-sub`,children:`n/a`}):e.reconciled?(0,H.jsxs)(`span`,{className:`status on`,children:[(0,H.jsx)(`i`,{"aria-hidden":!0}),`Yes`]}):(0,H.jsx)(`span`,{className:`flag`,children:`✕ No`})},',
+    replace: '',
+  },
+  {
+    why: 'Apple keywords subtitle',
+    find: '`Keyword exports for the selected range.`',
+    replace: '`Keyword detail for the selected range.`',
+  },
+  {
+    why: 'Apple keywords coverage note',
+    find: '`Keyword exports cover ${',
+    replace: '`Keyword data covers ${',
+  },
+  {
+    why: 'Apple keywords empty state',
+    find: '`No keyword-level exports for this range. Add Apple "Keywords" reports to /data/apple.`',
+    replace: '`Apple Search Ads is not available from Shadow yet, so there is no keyword detail.`',
+  },
+  {
+    why: 'High Impact empty state',
+    find: '`No High Impact data in this date range. Masthead rows come from the Google Ads ad group report; TikTok TopView from a TikTok Ads Manager campaign export.`',
+    replace:
+      '`No High Impact data in this date range. YouTube Masthead comes from Google Ads and TikTok TopView from TikTok, both through Shadow.`',
+  },
+  {
+    why: 'Meta empty state',
+    find: '`No Meta data in this date range. Upload a Meta Ads Manager ad-level export with a daily breakdown.`',
+    replace: '`No Meta data in this date range.`',
   },
 ];
 
 /** "Refreshing the data" glossary card, rewritten for the live source. */
 const REFRESHING_CARD =
   'function jG(){return(0,H.jsx)(Nc,{title:`Refreshing the data`,children:(0,H.jsxs)(`div`,{className:`prose`,children:[' +
-  '(0,H.jsxs)(`p`,{children:[`Google Ads (App, Search and YouTube Masthead), Meta and TikTok load live from `,(0,H.jsx)(`strong`,{children:`Shadow`}),`, Darkroom’s marketing data warehouse, when the page opens and every 2 hours while it stays open. Shadow re-syncs about 7 days back every hour, so recent days can still move as late conversions land.`]}),' +
-  '(0,H.jsx)(`p`,{children:`Days up to the Oct 19 export, and every Apple Search Ads day, come from that export and stay as exported. Shadow adds the closed days after it.`}),' +
-  '(0,H.jsx)(`p`,{children:`Live data uses the viewer’s own Shadow connection in claude.ai. Without one, the page shows the export only.`})' +
+  '(0,H.jsxs)(`p`,{children:[`Everything on this page comes from `,(0,H.jsx)(`strong`,{children:`Shadow`}),`, Darkroom’s marketing data warehouse: Google Ads (App, Search and YouTube Masthead), Meta and TikTok. The page loads it when it opens and again every 2 hours while it stays open. Shadow re-syncs about 7 days back every hour, so recent days can still move as late conversions land.`]}),' +
+  '(0,H.jsx)(`p`,{children:`Apple Search Ads is synced into Shadow but cannot be read from it yet, so the Apple views are empty until Shadow serves it.`}),' +
+  '(0,H.jsx)(`p`,{children:`The data loads through the viewer’s own Shadow connection in claude.ai. Without one, the page has nothing to show.`})' +
   ']})})}';
 
 function replaceOnce(src: string, p: Patch): string {
@@ -191,7 +239,6 @@ function between(src: string, start: string, end: string, from = 0): { start: nu
 
 export function buildArtifact(): string {
   const html = readFileSync(join(ROOT, 'reference', 'app', 'Index.html'), 'utf8');
-  const uploads = readFileSync(join(ROOT, 'reference', 'data', 'uploads.json'), 'utf8');
   const live = readFileSync(join(ROOT, 'artifact', 'live.js'), 'utf8');
   const picker = readFileSync(join(ROOT, 'artifact', 'range-picker.js'), 'utf8');
   const pickerCss = readFileSync(join(ROOT, 'artifact', 'range-picker.css'), 'utf8');
@@ -203,10 +250,12 @@ export function buildArtifact(): string {
     const r = between(html, '<script>\n      try {', '</script>');
     return '<script>\n      try {' + html.slice(r.start, r.end) + '</script>';
   })();
-  const datasetScript = (() => {
-    const r = between(html, '<script>window.__HARK_DATASET__ = ', '</script>');
-    return '<script>window.__HARK_DATASET__ = ' + html.slice(r.start, r.end) + '</script>';
-  })();
+  // The bundle merges imports onto a built-in snapshot (the Oct 8 export). Empty it: the page
+  // shows Shadow data only. A defined value also keeps "Download shareable file" hidden, which
+  // the artifact sandbox could not run anyway.
+  between(html, '<script>window.__HARK_DATASET__ = ', '</script>');
+  const datasetScript =
+    '<script>window.__HARK_DATASET__ = {"generatedAt":null,"rows":[],"keywords":[],"sources":[],"warnings":[]};</script>';
   const mod = between(html, '<script type="module">', '</script>');
   let bundle = html.slice(mod.start, mod.end);
   if (!/^\s*<style>/.test(html.slice(mod.end + '</script>'.length)))
@@ -220,28 +269,18 @@ export function buildArtifact(): string {
   const jg = between(bundle, 'function jG(){', 'function MG(');
   bundle = bundle.slice(0, jg.start - 'function jG(){'.length) + REFRESHING_CARD + bundle.slice(jg.end);
 
-  const seed = JSON.parse(uploads) as { generatedAt: string };
-  const exported = new Date(seed.generatedAt);
-  const exportDay = `${['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][exported.getUTCMonth()]} ${exported.getUTCDate()}`;
-
-  // Same escaping Code.gs applies before inlining.
-  const seedJson = uploads.trim().replace(/</g, '\\u003c');
   const loader = `<script>
 (function () {
-  // The bundle reads the dataset from localStorage. Serve it from memory (as Apps Script did)
-  // and pass every other key, like the theme choice, through to the real store.
+  // The bundle keeps its dataset in localStorage. Keep that in memory (it starts empty and
+  // live.js fills it from Shadow) and pass every other key, like the theme, to the real store.
   var KEY = 'hark-dashboard-imports-v1';
   var TEAM = 'hark-dashboard-team';
-  var initial = ${seedJson};
   var real = null;
   try { real = window.localStorage; } catch (e) {}
   var mem = {};
-  mem[KEY] = JSON.stringify(initial);
-  window.__harkSeed = initial;
-  window.__harkExportLabel = 'the ${exportDay} export';
-  window.__harkExportPill = ' · ${exportDay} export';
-  window.__harkPill = window.__harkExportPill;
-  window.__harkFooter = 'Showing the ${exportDay} export.';
+  window.__harkEmpty = 'Loading data from Shadow…';
+  window.__harkPill = '';
+  window.__harkFooter = '';
   var store = {
     getItem: function (k) {
       if (k === KEY) return Object.prototype.hasOwnProperty.call(mem, k) ? mem[k] : null;

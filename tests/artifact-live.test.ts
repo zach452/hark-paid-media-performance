@@ -9,6 +9,7 @@ const sandbox: Record<string, unknown> = {};
 runInNewContext(readFileSync(join(__dirname, '..', 'artifact', 'live.js'), 'utf8'), sandbox);
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const L = (sandbox as any).HarkLive;
+const plain = (v: unknown) => JSON.parse(JSON.stringify(v));
 
 // Shapes recorded from Shadow query_data for workspace Hark on 2026-10-18 (docs/shadow-fields.md).
 const wrap = (body: unknown) => ({ result: JSON.stringify(body) + '\n\n_Workspace: Hark_' });
@@ -235,75 +236,84 @@ describe('mapTikTok', () => {
   });
 });
 
-describe('buildLiveDataset', () => {
-  const seed = {
-    generatedAt: '2026-10-19T15:19:47.698Z',
-    rows: [
-      { date: '2026-10-18', channel: 'apple', spend: 1 },
-      { date: '2026-10-18', channel: 'google', spend: 100 },
-      { date: '2026-10-18', channel: 'hi', platform: 'TikTok TopView', spend: 50 },
-    ],
-    keywords: [],
-    sources: [],
-    warnings: [],
-  };
-  const g = (date: string, spend: number) => ({ date, channel: 'google', spend });
-  const now = new Date('2026-10-20T18:00:00Z');
+describe('buildDataset', () => {
+  const g = (date: string, channel = 'google', extra = {}) => ({ date, channel, spend: 1, ...extra });
 
-  it('keeps exported days, adds later days, and checks Shadow against the export', () => {
-    const { dataset, added } = L.buildLiveDataset(
-      seed,
-      { google: { rows: [g('2026-10-18', 100.5), g('2026-10-19', 90)] } },
-      now,
+  it('builds the dataset from Shadow rows only, sorted by date', () => {
+    const ds = L.buildDataset(
+      {
+        google: { rows: [g('2026-10-07'), g('2026-10-06', 'search')] },
+        meta: { rows: [g('2026-10-14', 'meta')] },
+        tiktok: { rows: [] },
+      },
+      Date.parse('2026-10-20T18:00:00Z'),
     );
-    expect(
-      dataset.rows
-        .filter((r: { channel: string }) => r.channel === 'google')
-        .map((r: { spend: number }) => r.spend),
-    ).toEqual([100, 90]);
-    expect(added.google).toEqual(['2026-10-19']);
-    expect(dataset.sources[0].sheets[0]).toMatchObject({ rows: 1, reconciled: true });
-    expect(dataset.warnings.some((w: string) => w.startsWith('Apple Search Ads has no live source'))).toBe(
-      true,
-    );
+    expect(ds.rows.map((r: { date: string }) => r.date)).toEqual(['2026-10-06', '2026-10-07', '2026-10-14']);
+    expect(ds.keywords).toEqual([]);
+    expect(ds.sources.map((x: { file: string }) => x.file)).toEqual(['Google Ads', 'Meta', 'TikTok']);
+    expect(ds.sources[0].sheets[0]).toMatchObject({
+      dates: ['2026-10-06', '2026-10-07'],
+      rows: 2,
+      reconciled: null,
+    });
   });
 
-  it('adds High Impact days only when both Google and TikTok loaded', () => {
-    const masthead = { date: '2026-10-19', channel: 'hi', platform: 'YouTube Masthead', spend: 5 };
-    const one = L.buildLiveDataset(seed, { google: { rows: [masthead] } }, now);
-    expect(one.dataset.rows.some((r: { date: string }) => r.date === '2026-10-19')).toBe(false);
-    const both = L.buildLiveDataset(seed, { google: { rows: [masthead] }, tiktok: { rows: [] } }, now);
-    expect(both.dataset.rows.some((r: { date: string }) => r.date === '2026-10-19')).toBe(true);
+  it('always flags Apple and flags each Shadow gap that applies', () => {
+    const ds = L.buildDataset(
+      { google: { rows: [g('2026-10-06', 'search')] }, meta: { rows: [g('2026-10-14', 'meta')] } },
+      null,
+    );
+    const text = ds.warnings.join('\n');
+    expect(text).toContain('Apple Search Ads is not available');
+    expect(text).toContain('Google Search installs are not in Shadow');
+    expect(text).toContain('Meta 3-second plays');
+    expect(text).toContain('Shadow history starts: Google Ads from Oct 6, Meta from Oct 14.');
+    expect(ds.sources[2].sheets[0].note).toBe('Loading…');
   });
 
-  it('reports a failed source and leaves its exported days alone', () => {
-    const { dataset } = L.buildLiveDataset(seed, { meta: { error: 'server_unavailable' } }, now);
-    expect(dataset.rows).toHaveLength(3);
-    expect(dataset.warnings).toContain(
-      'Shadow · Meta could not load (server_unavailable); its exported days still show.',
+  it('reports a failed source without inventing rows for it', () => {
+    const ds = L.buildDataset(
+      { google: { rows: [g('2026-10-06')] }, meta: { error: 'server_unavailable' } },
+      null,
+    );
+    expect(ds.rows).toHaveLength(1);
+    expect(ds.warnings).toContain(
+      'Meta could not load from Shadow (server_unavailable). Its views are empty until it does.',
     );
   });
 });
 
-describe('liveWindow', () => {
-  const seed = { rows: [{ date: '2026-10-18', channel: 'google' }] };
-  it('ends at yesterday in Los Angeles and covers 14 days', () => {
-    const w = L.liveWindow(seed, new Date('2026-10-20T06:00:00Z')); // Oct 19, 11pm in LA
-    expect(w).toMatchObject({ from: '2026-10-05', to: '2026-10-18' });
+describe('historyChunks', () => {
+  it('asks for Oct 1 through yesterday in Los Angeles', () => {
+    const w = L.historyChunks(new Date('2026-10-20T06:00:00Z')); // Oct 19, 11pm in LA
+    expect(plain(w)).toEqual({
+      from: '2026-10-01',
+      to: '2026-10-18',
+      chunks: [{ from: '2026-10-01', to: '2026-10-18', recent: true }],
+    });
   });
-  it('reaches back to the day after the export once the window has moved past it', () => {
-    const w = L.liveWindow(seed, new Date('2026-11-20T18:00:00Z'));
-    expect(w.from).toBe('2026-10-19');
-    expect(w.chunks.every((c: { from: string; to: string }) => L.addDays(c.from, 13) >= c.to)).toBe(true);
+  it('splits by calendar month and refreshes only the months holding the last 14 days', () => {
+    const w = L.historyChunks(new Date('2026-12-05T18:00:00Z'));
+    expect(plain(w.chunks)).toEqual([
+      { from: '2026-10-01', to: '2026-10-31', recent: false },
+      { from: '2026-11-01', to: '2026-11-30', recent: true },
+      { from: '2026-12-01', to: '2026-12-04', recent: true },
+    ]);
   });
 });
 
 describe('buildArtifact', () => {
+  const html = buildArtifact();
   it('applies every bundle patch and stays under the 16 MB page limit', () => {
-    const html = buildArtifact();
     expect(Buffer.byteLength(html)).toBeLessThan(16 * 1024 * 1024);
     expect(html).toContain('window.__harkSet=a');
     expect(html).toContain('children:window.__harkFooter??ws.footer');
     expect(html.startsWith('<title>Hark · Paid Media Performance</title>')).toBe(true);
+  });
+  it('carries no exported data', () => {
+    expect(html).toContain('window.__HARK_DATASET__ = {"generatedAt":null,"rows":[]');
+    // An Apple campaign id and a source file name that exist only in the exports.
+    expect(html).not.toContain('2144818472');
+    expect(html).not.toContain('Apple Ads Data (1).xlsx');
   });
 });
