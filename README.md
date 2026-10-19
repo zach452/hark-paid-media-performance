@@ -4,6 +4,20 @@ Darkroom's client dashboard for Hark (Hark Pro, US). It's a Next.js port of the 
 
 **Status: Phase 0 (setup and spikes).** See [`docs/phase0.md`](docs/phase0.md) for findings and open decisions.
 
+## Claude artifact (live from Shadow)
+
+A version that needs no hosting: the original dashboard build, published as a claude.ai artifact. It calls the viewer's own Shadow connector, with no server or tokens.
+
+- **What it shows:** the Oct 19 export as the base. For viewers with the Shadow connector, Google Ads, Meta and TikTok load live (rolling 14 days, refreshed every 2 hours). Exported days stay as exported, and Shadow adds the closed days after them. Apple Search Ads stays on the export until Shadow can serve it.
+- **Gaps:** live days carry the gaps in `docs/gaps.md`: no Search installs, no Meta 3-second plays, no multi-ad TikTok reach. The page lists them under Data & methodology → Source health.
+- **Who can see it:** declaring a connector means it can't be shared by public link. Viewers without Shadow see the export.
+- **Code:** `artifact/live.js` is the live layer. `scripts/build-artifact.ts` assembles the page and applies the bundle patches as exact-match replacements.
+
+```bash
+npm run artifact:build    # → artifact/dist/hark-paid-media.html (then publish it with the Artifact tool)
+npm run artifact:parity   # every tab's text vs the reference; only intended copy may differ
+```
+
 ## Layout
 
 | Path                           | What                                                                        |
