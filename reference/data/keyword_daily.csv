@@ -1,0 +1,868 @@
+date,campaignId,campaign,adGroupId,adGroup,keywordId,keyword,matchType,status,bid,spend,impressions,taps,installsReported,installsTap,installsView,newDownloads,redownloads
+2026-10-06,2144823289,Competitors,2151621406,Competitors,2342187594,comet ai,EXACT,RUNNING,30,0,1,0,0,0,0,0,0
+2026-10-06,2144823289,Competitors,2151621406,Competitors,2342167441,foai,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-06,2144823289,Competitors,2151621406,Competitors,2342167440,instinct ai,EXACT,RUNNING,30,5.38,178,1,1,0,1,1,0
+2026-10-06,2144823289,Competitors,2151621406,Competitors,2342167439,muse ai,EXACT,RUNNING,30,4.86,70,1,1,1,0,1,0
+2026-10-06,2144823289,Competitors,2151621406,Competitors,2342187593,muse from meta,EXACT,RUNNING,30,0,17,0,0,0,0,0,0
+2026-10-06,2144823289,Competitors,2151621406,Competitors,2342187592,muse meta,EXACT,RUNNING,30,0,2,0,0,0,0,0,0
+2026-10-06,2144823289,Competitors,2151621406,Competitors,2342167438,perplexityai,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-06,2144818472,Brand,2151607398,Brand,2342115244,brett adcock ai,EXACT,RUNNING,2,0,0,0,0,0,0,0,0
+2026-10-06,2144818472,Brand,2151607398,Brand,2342115246,hark,EXACT,RUNNING,2,41.57,1509,227,1136,165,971,1080,56
+2026-10-06,2144818472,Brand,2151607398,Brand,2342115243,hark ai,EXACT,RUNNING,2,11.37,15,12,11,11,0,11,0
+2026-10-06,2144818472,Brand,2151607398,Brand,2342115245,hark pro,EXACT,RUNNING,2,10.89,514,73,387,52,335,371,16
+2026-10-07,2144823289,Competitors,2151621406,Competitors,2342187594,comet ai,EXACT,RUNNING,30,0,1,0,0,0,0,0,0
+2026-10-07,2144823289,Competitors,2151621406,Competitors,2342167441,foai,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-07,2144823289,Competitors,2151621406,Competitors,2342167440,instinct ai,EXACT,RUNNING,30,59.11,352,9,6,4,2,6,0
+2026-10-07,2144823289,Competitors,2151621406,Competitors,2342167439,muse ai,EXACT,RUNNING,30,11.67,19,1,0,0,0,0,0
+2026-10-07,2144823289,Competitors,2151621406,Competitors,2342187593,muse from meta,EXACT,RUNNING,30,23.55,55,1,0,0,0,0,0
+2026-10-07,2144823289,Competitors,2151621406,Competitors,2342187592,muse meta,EXACT,RUNNING,30,0,15,0,0,0,0,0,0
+2026-10-07,2144823289,Competitors,2151621406,Competitors,2342167438,perplexityai,EXACT,RUNNING,30,0,1,0,0,0,0,0,0
+2026-10-07,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276955,ai agent app,BROAD,RUNNING,5,37.88,429,6,1,1,0,1,0
+2026-10-07,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276140,ai assistant app,BROAD,RUNNING,5,61.11,588,9,4,4,0,4,0
+2026-10-07,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276960,ai assistant apps,BROAD,RUNNING,5,0,12,0,0,0,0,0,0
+2026-10-07,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276943,ai assistant for android,BROAD,RUNNING,5,0,0,0,0,0,0,0,0
+2026-10-07,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276948,ai assistant online,BROAD,RUNNING,5,1.92,7,1,0,0,0,0,0
+2026-10-07,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276959,ai digital assistant,BROAD,RUNNING,5,0,0,0,0,0,0,0,0
+2026-10-07,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276138,ai helpers,BROAD,RUNNING,5,6.01,41,1,0,0,0,0,0
+2026-10-07,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276950,ai personal,BROAD,RUNNING,5,10.86,135,2,0,0,0,0,0
+2026-10-07,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276953,ai personal assistant app,BROAD,RUNNING,5,3.27,4,1,0,0,0,0,0
+2026-10-07,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276139,ai powered assistant,BROAD,RUNNING,5,0,0,0,0,0,0,0,0
+2026-10-07,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276944,ai powered personal assistant,BROAD,RUNNING,5,0,2,0,0,0,0,0,0
+2026-10-07,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276952,ai productivity assistant,BROAD,RUNNING,5,45.49,117,4,0,0,0,0,0
+2026-10-07,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276137,artificial intelligence assistant,BROAD,RUNNING,5,108.68,390,14,2,2,0,2,0
+2026-10-07,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276141,artificial intelligence virtual assistant,BROAD,RUNNING,5,0,9,0,0,0,0,0,0
+2026-10-07,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276945,assistant ai,BROAD,RUNNING,5,17.22,12,2,1,1,0,1,0
+2026-10-07,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276956,best ai assistant app,BROAD,RUNNING,5,0,2,0,0,0,0,0,0
+2026-10-07,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276962,best ai assistant for android,BROAD,RUNNING,5,0,0,0,0,0,0,0,0
+2026-10-07,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276947,best ai personal assistant,BROAD,RUNNING,5,0,0,0,0,0,0,0,0
+2026-10-07,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276946,best personal assistant ai,BROAD,RUNNING,5,0,5,0,0,0,0,0,0
+2026-10-07,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276954,digital assistant app,BROAD,RUNNING,5,0,8,0,0,0,0,0,0
+2026-10-07,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276961,digital personal assistant,BROAD,RUNNING,5,0,3,0,0,0,0,0,0
+2026-10-07,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276963,iphone ai assistant,BROAD,RUNNING,5,0,6,0,0,0,0,0,0
+2026-10-07,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276942,personal ai,BROAD,RUNNING,5,58.71,154,8,2,2,0,2,0
+2026-10-07,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276949,personal ai agent,BROAD,RUNNING,5,14.71,23,1,1,1,0,1,0
+2026-10-07,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276951,personal assistant app,BROAD,RUNNING,5,0,29,0,0,0,0,0,0
+2026-10-07,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276958,proactive ai assistant,BROAD,RUNNING,5,0,1,0,0,0,0,0,0
+2026-10-07,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276957,top ai assistant,BROAD,RUNNING,5,0,3,0,0,0,0,0,0
+2026-10-07,2144820683,General AI assistants,2151609067,General AI assistants,2342123557,ai agent app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-07,2144820683,General AI assistants,2151609067,General AI assistants,2342135361,ai assistant,EXACT,RUNNING,30,0,3,0,0,0,0,0,0
+2026-10-07,2144820683,General AI assistants,2151609067,General AI assistants,2342123542,ai assistant app,EXACT,RUNNING,30,18.93,26,1,1,1,0,1,0
+2026-10-07,2144820683,General AI assistants,2151609067,General AI assistants,2342123562,ai assistant apps,BROAD,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-07,2144820683,General AI assistants,2151609067,General AI assistants,2342123545,ai assistant for android,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-07,2144820683,General AI assistants,2151609067,General AI assistants,2344177296,ai assistant for business,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-07,2144820683,General AI assistants,2151609067,General AI assistants,2342123550,ai assistant online,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-07,2144820683,General AI assistants,2151609067,General AI assistants,2344177295,ai business assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-07,2144820683,General AI assistants,2151609067,General AI assistants,2342123561,ai digital assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-07,2144820683,General AI assistants,2151609067,General AI assistants,2342123552,ai personal,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-07,2144820683,General AI assistants,2151609067,General AI assistants,2342123555,ai personal assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-07,2144820683,General AI assistants,2151609067,General AI assistants,2342119141,ai powered assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-07,2144820683,General AI assistants,2151609067,General AI assistants,2342123546,ai powered personal assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-07,2144820683,General AI assistants,2151609067,General AI assistants,2342123554,ai productivity assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-07,2144820683,General AI assistants,2151609067,General AI assistants,2342135591,ai virtual assistant,EXACT,RUNNING,30,9.5,4,1,0,0,0,0,0
+2026-10-07,2144820683,General AI assistants,2151609067,General AI assistants,2342148702,artificial assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-07,2144820683,General AI assistants,2151609067,General AI assistants,2342119140,artificial intelligence assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-07,2144820683,General AI assistants,2151609067,General AI assistants,2342141997,artificial intelligence personal assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-07,2144820683,General AI assistants,2151609067,General AI assistants,2342123543,artificial intelligence virtual assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-07,2144820683,General AI assistants,2151609067,General AI assistants,2342123547,assistant ai,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-07,2144820683,General AI assistants,2151609067,General AI assistants,2342123558,best ai assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-07,2144820683,General AI assistants,2151609067,General AI assistants,2342123564,best ai assistant for android,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-07,2144820683,General AI assistants,2151609067,General AI assistants,2342123549,best ai personal assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-07,2144820683,General AI assistants,2151609067,General AI assistants,2342123548,best personal assistant ai,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-07,2144820683,General AI assistants,2151609067,General AI assistants,2342123556,digital assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-07,2144820683,General AI assistants,2151609067,General AI assistants,2342123563,digital personal assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-07,2144820683,General AI assistants,2151609067,General AI assistants,2342123565,iphone ai assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-07,2144820683,General AI assistants,2151609067,General AI assistants,2342123544,personal ai,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-07,2144820683,General AI assistants,2151609067,General AI assistants,2342123551,personal ai agent,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-07,2144820683,General AI assistants,2151609067,General AI assistants,2342123553,personal assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-07,2144820683,General AI assistants,2151609067,General AI assistants,2342123560,proactive ai assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-07,2144820683,General AI assistants,2151609067,General AI assistants,2342123559,top ai assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-07,2144818472,Brand,2151607398,Brand,2342115244,brett adcock ai,EXACT,RUNNING,2,0,0,0,0,0,0,0,0
+2026-10-07,2144818472,Brand,2151607398,Brand,2342115246,hark,EXACT,RUNNING,2,61.5,2453,378,1685,267,1418,1461,224
+2026-10-07,2144818472,Brand,2151607398,Brand,2342115243,hark ai,EXACT,RUNNING,2,16.78,697,145,514,123,391,445,69
+2026-10-07,2144818472,Brand,2151607398,Brand,2342115245,hark pro,EXACT,RUNNING,2,14.71,734,146,562,127,435,473,89
+2026-10-08,2144823289,Competitors,2151621406,Competitors,2342187594,comet ai,EXACT,RUNNING,30,0,2,0,0,0,0,0,0
+2026-10-08,2144823289,Competitors,2151621406,Competitors,2342167441,foai,EXACT,RUNNING,30,0,4,0,0,0,0,0,0
+2026-10-08,2144823289,Competitors,2151621406,Competitors,2342167440,instinct ai,EXACT,RUNNING,30,106.36,242,8,4,4,0,4,0
+2026-10-08,2144823289,Competitors,2151621406,Competitors,2342167439,muse ai,EXACT,RUNNING,30,0,5,0,0,0,0,0,0
+2026-10-08,2144823289,Competitors,2151621406,Competitors,2342187593,muse from meta,EXACT,RUNNING,30,9.15,41,1,0,0,0,0,0
+2026-10-08,2144823289,Competitors,2151621406,Competitors,2342187592,muse meta,EXACT,RUNNING,30,0,1,0,0,0,0,0,0
+2026-10-08,2144823289,Competitors,2151621406,Competitors,2342167438,perplexityai,EXACT,RUNNING,30,0,5,0,0,0,0,0,0
+2026-10-08,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276955,ai agent app,BROAD,RUNNING,10,57.11,457,13,0,0,0,0,0
+2026-10-08,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276140,ai assistant app,BROAD,RUNNING,10,104.21,804,20,3,3,0,2,1
+2026-10-08,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276960,ai assistant apps,BROAD,RUNNING,10,3.99,9,1,1,1,0,1,0
+2026-10-08,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276943,ai assistant for android,BROAD,RUNNING,10,0,1,0,0,0,0,0,0
+2026-10-08,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276948,ai assistant online,BROAD,RUNNING,10,8.46,3,1,0,0,0,0,0
+2026-10-08,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276959,ai digital assistant,BROAD,RUNNING,10,0,1,0,0,0,0,0,0
+2026-10-08,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276138,ai helpers,BROAD,RUNNING,10,18.69,46,3,0,0,0,0,0
+2026-10-08,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276950,ai personal,BROAD,RUNNING,10,46.5,346,12,0,0,0,0,0
+2026-10-08,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276953,ai personal assistant app,BROAD,RUNNING,10,0,0,0,0,0,0,0,0
+2026-10-08,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276139,ai powered assistant,BROAD,RUNNING,10,0,0,0,0,0,0,0,0
+2026-10-08,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276944,ai powered personal assistant,BROAD,RUNNING,10,0,0,0,0,0,0,0,0
+2026-10-08,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276952,ai productivity assistant,BROAD,RUNNING,10,17.12,130,2,1,1,0,1,0
+2026-10-08,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276137,artificial intelligence assistant,BROAD,RUNNING,10,83.26,893,17,1,1,0,1,0
+2026-10-08,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276141,artificial intelligence virtual assistant,BROAD,RUNNING,10,0,1,0,0,0,0,0,0
+2026-10-08,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276945,assistant ai,BROAD,RUNNING,10,0,2,0,0,0,0,0,0
+2026-10-08,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276956,best ai assistant app,BROAD,RUNNING,10,0,0,0,0,0,0,0,0
+2026-10-08,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276962,best ai assistant for android,BROAD,RUNNING,10,0,0,0,0,0,0,0,0
+2026-10-08,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276947,best ai personal assistant,BROAD,RUNNING,10,0,0,0,0,0,0,0,0
+2026-10-08,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276946,best personal assistant ai,BROAD,RUNNING,10,0,7,0,0,0,0,0,0
+2026-10-08,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276954,digital assistant app,BROAD,RUNNING,10,0,1,0,0,0,0,0,0
+2026-10-08,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276961,digital personal assistant,BROAD,RUNNING,10,0,0,0,0,0,0,0,0
+2026-10-08,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276963,iphone ai assistant,BROAD,RUNNING,10,0,1,0,0,0,0,0,0
+2026-10-08,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276942,personal ai,BROAD,RUNNING,10,24.3,245,5,0,0,0,0,0
+2026-10-08,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276949,personal ai agent,BROAD,RUNNING,10,2.48,6,1,1,1,0,1,0
+2026-10-08,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276951,personal assistant app,BROAD,RUNNING,10,3.72,26,1,0,0,0,0,0
+2026-10-08,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276958,proactive ai assistant,BROAD,RUNNING,10,0,0,0,0,0,0,0,0
+2026-10-08,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276957,top ai assistant,BROAD,RUNNING,10,0,4,0,0,0,0,0,0
+2026-10-08,2144818472,Brand,2151607398,Brand,2342115244,brett adcock ai,EXACT,RUNNING,2,0,0,0,0,0,0,0,0
+2026-10-08,2144818472,Brand,2151607398,Brand,2342115246,hark,EXACT,RUNNING,2,72.04,2091,347,1408,232,1176,1197,211
+2026-10-08,2144818472,Brand,2151607398,Brand,2342115243,hark ai,EXACT,RUNNING,2,12.69,279,56,191,38,153,154,37
+2026-10-08,2144818472,Brand,2151607398,Brand,2342115245,hark pro,EXACT,RUNNING,2,12.84,300,62,207,46,161,168,39
+2026-10-09,2144823289,Competitors,2151621406,Competitors,2342187594,comet ai,EXACT,RUNNING,30,0,1,0,0,0,0,0,0
+2026-10-09,2144823289,Competitors,2151621406,Competitors,2342167441,foai,EXACT,RUNNING,30,0,5,0,0,0,0,0,0
+2026-10-09,2144823289,Competitors,2151621406,Competitors,2342167440,instinct ai,EXACT,RUNNING,30,37.84,227,2,1,1,0,1,0
+2026-10-09,2144823289,Competitors,2151621406,Competitors,2342167439,muse ai,EXACT,RUNNING,30,0,10,0,0,0,0,0,0
+2026-10-09,2144823289,Competitors,2151621406,Competitors,2342187593,muse from meta,EXACT,RUNNING,30,27.91,57,2,1,1,0,1,0
+2026-10-09,2144823289,Competitors,2151621406,Competitors,2342187592,muse meta,EXACT,RUNNING,30,0,3,0,0,0,0,0,0
+2026-10-09,2144823289,Competitors,2151621406,Competitors,2342167438,perplexityai,EXACT,RUNNING,30,81.86,115,4,1,1,0,1,0
+2026-10-09,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276955,ai agent app,BROAD,RUNNING,10,134.18,709,22,6,6,0,6,0
+2026-10-09,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276140,ai assistant app,BROAD,RUNNING,10,201.09,959,31,6,5,1,5,1
+2026-10-09,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276960,ai assistant apps,BROAD,RUNNING,10,0,10,0,0,0,0,0,0
+2026-10-09,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276943,ai assistant for android,BROAD,RUNNING,10,0,0,0,0,0,0,0,0
+2026-10-09,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276948,ai assistant online,BROAD,RUNNING,10,0,4,0,0,0,0,0,0
+2026-10-09,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276959,ai digital assistant,BROAD,RUNNING,10,0,0,0,0,0,0,0,0
+2026-10-09,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276138,ai helpers,BROAD,RUNNING,10,0,31,0,0,0,0,0,0
+2026-10-09,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276950,ai personal,BROAD,RUNNING,10,52.26,353,9,0,0,0,0,0
+2026-10-09,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276953,ai personal assistant app,BROAD,RUNNING,10,0,1,0,0,0,0,0,0
+2026-10-09,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276139,ai powered assistant,BROAD,RUNNING,10,0,0,0,0,0,0,0,0
+2026-10-09,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276944,ai powered personal assistant,BROAD,RUNNING,10,0,1,0,0,0,0,0,0
+2026-10-09,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276952,ai productivity assistant,BROAD,PAUSED,10,19.64,168,3,0,0,0,0,0
+2026-10-09,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276137,artificial intelligence assistant,BROAD,RUNNING,10,137.19,791,21,5,4,1,5,0
+2026-10-09,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276141,artificial intelligence virtual assistant,BROAD,RUNNING,10,0,7,0,0,0,0,0,0
+2026-10-09,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276945,assistant ai,BROAD,RUNNING,10,0,4,0,0,0,0,0,0
+2026-10-09,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276956,best ai assistant app,BROAD,RUNNING,10,0,4,0,0,0,0,0,0
+2026-10-09,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276962,best ai assistant for android,BROAD,RUNNING,10,0,1,0,0,0,0,0,0
+2026-10-09,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276947,best ai personal assistant,BROAD,RUNNING,10,0,0,0,0,0,0,0,0
+2026-10-09,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276946,best personal assistant ai,BROAD,RUNNING,10,0,4,0,0,0,0,0,0
+2026-10-09,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276954,digital assistant app,BROAD,RUNNING,10,9.7,5,1,0,0,0,0,0
+2026-10-09,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276961,digital personal assistant,BROAD,RUNNING,10,0,1,0,0,0,0,0,0
+2026-10-09,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276963,iphone ai assistant,BROAD,RUNNING,10,0,4,0,0,0,0,0,0
+2026-10-09,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276942,personal ai,BROAD,RUNNING,10,50.5,252,9,0,0,0,0,0
+2026-10-09,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276949,personal ai agent,BROAD,RUNNING,10,0,6,0,0,0,0,0,0
+2026-10-09,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276951,personal assistant app,BROAD,RUNNING,10,23.84,25,3,0,0,0,0,0
+2026-10-09,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276958,proactive ai assistant,BROAD,RUNNING,10,0,0,0,0,0,0,0,0
+2026-10-09,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276957,top ai assistant,BROAD,RUNNING,10,0,1,0,0,0,0,0,0
+2026-10-09,2144820683,General AI assistants,2151609067,General AI assistants,2342123557,ai agent app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-09,2144820683,General AI assistants,2151609067,General AI assistants,2342135361,ai assistant,EXACT,RUNNING,30,85.08,60,4,0,0,0,0,0
+2026-10-09,2144820683,General AI assistants,2151609067,General AI assistants,2342123542,ai assistant app,EXACT,RUNNING,30,48.57,28,2,0,0,0,0,0
+2026-10-09,2144820683,General AI assistants,2151609067,General AI assistants,2342123562,ai assistant apps,BROAD,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-09,2144820683,General AI assistants,2151609067,General AI assistants,2342123545,ai assistant for android,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-09,2144820683,General AI assistants,2151609067,General AI assistants,2344177296,ai assistant for business,EXACT,RUNNING,30,0,1,0,0,0,0,0,0
+2026-10-09,2144820683,General AI assistants,2151609067,General AI assistants,2342123550,ai assistant online,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-09,2144820683,General AI assistants,2151609067,General AI assistants,2344177295,ai business assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-09,2144820683,General AI assistants,2151609067,General AI assistants,2342123561,ai digital assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-09,2144820683,General AI assistants,2151609067,General AI assistants,2342123552,ai personal,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-09,2144820683,General AI assistants,2151609067,General AI assistants,2342123555,ai personal assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-09,2144820683,General AI assistants,2151609067,General AI assistants,2342119141,ai powered assistant,EXACT,RUNNING,30,0,1,0,0,0,0,0,0
+2026-10-09,2144820683,General AI assistants,2151609067,General AI assistants,2342123546,ai powered personal assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-09,2144820683,General AI assistants,2151609067,General AI assistants,2342123554,ai productivity assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-09,2144820683,General AI assistants,2151609067,General AI assistants,2342135591,ai virtual assistant,EXACT,RUNNING,30,0,5,0,0,0,0,0,0
+2026-10-09,2144820683,General AI assistants,2151609067,General AI assistants,2342148702,artificial assistant,EXACT,RUNNING,30,0,1,0,0,0,0,0,0
+2026-10-09,2144820683,General AI assistants,2151609067,General AI assistants,2342119140,artificial intelligence assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-09,2144820683,General AI assistants,2151609067,General AI assistants,2342141997,artificial intelligence personal assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-09,2144820683,General AI assistants,2151609067,General AI assistants,2342123543,artificial intelligence virtual assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-09,2144820683,General AI assistants,2151609067,General AI assistants,2342123547,assistant ai,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-09,2144820683,General AI assistants,2151609067,General AI assistants,2342123558,best ai assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-09,2144820683,General AI assistants,2151609067,General AI assistants,2342123564,best ai assistant for android,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-09,2144820683,General AI assistants,2151609067,General AI assistants,2342123549,best ai personal assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-09,2144820683,General AI assistants,2151609067,General AI assistants,2342123548,best personal assistant ai,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-09,2144820683,General AI assistants,2151609067,General AI assistants,2342123556,digital assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-09,2144820683,General AI assistants,2151609067,General AI assistants,2342123563,digital personal assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-09,2144820683,General AI assistants,2151609067,General AI assistants,2342123565,iphone ai assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-09,2144820683,General AI assistants,2151609067,General AI assistants,2342123544,personal ai,EXACT,RUNNING,30,46.48,4,3,0,0,0,0,0
+2026-10-09,2144820683,General AI assistants,2151609067,General AI assistants,2342123551,personal ai agent,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-09,2144820683,General AI assistants,2151609067,General AI assistants,2342123553,personal assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-09,2144820683,General AI assistants,2151609067,General AI assistants,2342123560,proactive ai assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-09,2144820683,General AI assistants,2151609067,General AI assistants,2342123559,top ai assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-09,2144818472,Brand,2151607398,Brand,2342115244,brett adcock ai,EXACT,RUNNING,2,0,0,0,0,0,0,0,0
+2026-10-09,2144818472,Brand,2151607398,Brand,2342115246,hark,EXACT,RUNNING,2,29.71,1099,173,706,106,600,622,84
+2026-10-09,2144818472,Brand,2151607398,Brand,2342115243,hark ai,EXACT,RUNNING,2,5.65,163,26,119,19,100,98,21
+2026-10-09,2144818472,Brand,2151607398,Brand,2342115245,hark pro,EXACT,RUNNING,2,3.39,142,30,95,20,75,78,17
+2026-10-10,2144823289,Competitors,2151621406,Competitors,2342187594,comet ai,EXACT,RUNNING,30,0,4,0,0,0,0,0,0
+2026-10-10,2144823289,Competitors,2151621406,Competitors,2342167441,foai,EXACT,RUNNING,30,0,1,0,0,0,0,0,0
+2026-10-10,2144823289,Competitors,2151621406,Competitors,2342167440,instinct ai,EXACT,RUNNING,30,119.25,206,8,2,2,0,2,0
+2026-10-10,2144823289,Competitors,2151621406,Competitors,2342167439,muse ai,EXACT,RUNNING,30,8.61,6,1,0,0,0,0,0
+2026-10-10,2144823289,Competitors,2151621406,Competitors,2342187593,muse from meta,EXACT,RUNNING,30,19.18,102,1,0,0,0,0,0
+2026-10-10,2144823289,Competitors,2151621406,Competitors,2342187592,muse meta,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-10,2144823289,Competitors,2151621406,Competitors,2342167438,perplexityai,EXACT,RUNNING,30,85.09,224,4,0,0,0,0,0
+2026-10-10,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276955,ai agent app,BROAD,RUNNING,10,10.78,359,2,1,1,0,1,0
+2026-10-10,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276140,ai assistant app,BROAD,RUNNING,10,60.14,295,9,1,1,0,1,0
+2026-10-10,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276960,ai assistant apps,BROAD,RUNNING,10,9.61,74,1,1,1,0,1,0
+2026-10-10,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276943,ai assistant for android,BROAD,RUNNING,10,0,19,0,0,0,0,0,0
+2026-10-10,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276948,ai assistant online,BROAD,RUNNING,10,16.83,116,3,1,1,0,1,0
+2026-10-10,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276959,ai digital assistant,BROAD,RUNNING,10,19.67,229,3,1,1,0,1,0
+2026-10-10,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276138,ai helpers,BROAD,RUNNING,10,56.52,260,8,1,1,0,1,0
+2026-10-10,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276950,ai personal,BROAD,RUNNING,10,27.64,261,4,0,0,0,0,0
+2026-10-10,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276953,ai personal assistant app,BROAD,RUNNING,10,6.72,62,1,1,1,0,1,0
+2026-10-10,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276139,ai powered assistant,BROAD,RUNNING,10,17.23,99,2,1,1,0,1,0
+2026-10-10,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276944,ai powered personal assistant,BROAD,RUNNING,10,9.3,170,1,0,0,0,0,0
+2026-10-10,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276952,ai productivity assistant,BROAD,PAUSED,10,9.93,107,1,0,0,0,0,0
+2026-10-10,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276137,artificial intelligence assistant,BROAD,RUNNING,10,52.67,325,9,3,3,0,3,0
+2026-10-10,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276141,artificial intelligence virtual assistant,BROAD,RUNNING,10,9.98,160,1,0,0,0,0,0
+2026-10-10,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276945,assistant ai,BROAD,RUNNING,10,38.07,219,6,2,2,0,2,0
+2026-10-10,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276956,best ai assistant app,BROAD,RUNNING,10,23.33,88,3,2,2,0,2,0
+2026-10-10,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276962,best ai assistant for android,BROAD,RUNNING,10,0,14,0,0,0,0,0,0
+2026-10-10,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276947,best ai personal assistant,BROAD,RUNNING,10,0,27,0,0,0,0,0,0
+2026-10-10,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276946,best personal assistant ai,BROAD,RUNNING,10,4.17,16,1,0,0,0,0,0
+2026-10-10,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276954,digital assistant app,BROAD,RUNNING,10,0,3,0,0,0,0,0,0
+2026-10-10,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276961,digital personal assistant,BROAD,RUNNING,10,0,1,0,0,0,0,0,0
+2026-10-10,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276963,iphone ai assistant,BROAD,RUNNING,10,3.85,63,1,0,0,0,0,0
+2026-10-10,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276942,personal ai,BROAD,RUNNING,10,59.58,168,9,1,1,0,1,0
+2026-10-10,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276949,personal ai agent,BROAD,RUNNING,10,0,14,0,0,0,0,0,0
+2026-10-10,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276951,personal assistant app,BROAD,RUNNING,10,0,24,0,0,0,0,0,0
+2026-10-10,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276958,proactive ai assistant,BROAD,RUNNING,10,4.78,20,1,0,0,0,0,0
+2026-10-10,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276957,top ai assistant,BROAD,RUNNING,10,35.84,169,6,1,1,0,1,0
+2026-10-10,2144820683,General AI assistants,2151609067,General AI assistants,2342123557,ai agent app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-10,2144820683,General AI assistants,2151609067,General AI assistants,2342135361,ai assistant,EXACT,RUNNING,30,177.7,91,9,6,6,0,6,0
+2026-10-10,2144820683,General AI assistants,2151609067,General AI assistants,2342123542,ai assistant app,EXACT,RUNNING,30,10.46,5,1,0,0,0,0,0
+2026-10-10,2144820683,General AI assistants,2151609067,General AI assistants,2342123562,ai assistant apps,BROAD,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-10,2144820683,General AI assistants,2151609067,General AI assistants,2342123545,ai assistant for android,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-10,2144820683,General AI assistants,2151609067,General AI assistants,2344177296,ai assistant for business,EXACT,RUNNING,30,0,1,0,0,0,0,0,0
+2026-10-10,2144820683,General AI assistants,2151609067,General AI assistants,2342123550,ai assistant online,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-10,2144820683,General AI assistants,2151609067,General AI assistants,2344177295,ai business assistant,EXACT,RUNNING,30,0,1,0,0,0,0,0,0
+2026-10-10,2144820683,General AI assistants,2151609067,General AI assistants,2342123561,ai digital assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-10,2144820683,General AI assistants,2151609067,General AI assistants,2342123552,ai personal,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-10,2144820683,General AI assistants,2151609067,General AI assistants,2342123555,ai personal assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-10,2144820683,General AI assistants,2151609067,General AI assistants,2342119141,ai powered assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-10,2144820683,General AI assistants,2151609067,General AI assistants,2342123546,ai powered personal assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-10,2144820683,General AI assistants,2151609067,General AI assistants,2342123554,ai productivity assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-10,2144820683,General AI assistants,2151609067,General AI assistants,2342135591,ai virtual assistant,EXACT,RUNNING,30,0,4,0,0,0,0,0,0
+2026-10-10,2144820683,General AI assistants,2151609067,General AI assistants,2342148702,artificial assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-10,2144820683,General AI assistants,2151609067,General AI assistants,2342119140,artificial intelligence assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-10,2144820683,General AI assistants,2151609067,General AI assistants,2342141997,artificial intelligence personal assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-10,2144820683,General AI assistants,2151609067,General AI assistants,2342123543,artificial intelligence virtual assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-10,2144820683,General AI assistants,2151609067,General AI assistants,2342123547,assistant ai,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-10,2144820683,General AI assistants,2151609067,General AI assistants,2342123558,best ai assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-10,2144820683,General AI assistants,2151609067,General AI assistants,2342123564,best ai assistant for android,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-10,2144820683,General AI assistants,2151609067,General AI assistants,2342123549,best ai personal assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-10,2144820683,General AI assistants,2151609067,General AI assistants,2342123548,best personal assistant ai,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-10,2144820683,General AI assistants,2151609067,General AI assistants,2342123556,digital assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-10,2144820683,General AI assistants,2151609067,General AI assistants,2342123563,digital personal assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-10,2144820683,General AI assistants,2151609067,General AI assistants,2342123565,iphone ai assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-10,2144820683,General AI assistants,2151609067,General AI assistants,2342123544,personal ai,EXACT,RUNNING,30,0,2,0,0,0,0,0,0
+2026-10-10,2144820683,General AI assistants,2151609067,General AI assistants,2342123551,personal ai agent,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-10,2144820683,General AI assistants,2151609067,General AI assistants,2342123553,personal assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-10,2144820683,General AI assistants,2151609067,General AI assistants,2342123560,proactive ai assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-10,2144820683,General AI assistants,2151609067,General AI assistants,2342123559,top ai assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-10,2144818472,Brand,2151607398,Brand,2342115244,brett adcock ai,EXACT,RUNNING,2,0,0,0,0,0,0,0,0
+2026-10-10,2144818472,Brand,2151607398,Brand,2342115246,hark,EXACT,RUNNING,2,26.76,877,152,562,105,457,494,68
+2026-10-10,2144818472,Brand,2151607398,Brand,2342115243,hark ai,EXACT,RUNNING,2,4.82,138,20,97,15,82,93,4
+2026-10-10,2144818472,Brand,2151607398,Brand,2342115245,hark pro,EXACT,RUNNING,2,2.92,124,21,81,13,68,73,8
+2026-10-11,2144823289,Competitors,2151621406,Competitors,2342187594,comet ai,EXACT,RUNNING,30,0,2,0,0,0,0,0,0
+2026-10-11,2144823289,Competitors,2151621406,Competitors,2342167441,foai,EXACT,RUNNING,30,0,4,0,0,0,0,0,0
+2026-10-11,2144823289,Competitors,2151621406,Competitors,2349044811,grock,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-11,2144823289,Competitors,2151621406,Competitors,2349044814,grock ia,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-11,2144823289,Competitors,2151621406,Competitors,2349044813,grok,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-11,2144823289,Competitors,2151621406,Competitors,2349044815,grok ai,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-11,2144823289,Competitors,2151621406,Competitors,2349044810,grok ai free,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-11,2144823289,Competitors,2151621406,Competitors,2349044812,grok bot,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-11,2144823289,Competitors,2151621406,Competitors,2342167440,instinct ai,EXACT,RUNNING,30,59.91,232,5,0,0,0,0,0
+2026-10-11,2144823289,Competitors,2151621406,Competitors,2342167439,muse ai,EXACT,RUNNING,30,0,7,0,0,0,0,0,0
+2026-10-11,2144823289,Competitors,2151621406,Competitors,2342187593,muse from meta,EXACT,RUNNING,30,18.17,74,1,1,1,0,1,0
+2026-10-11,2144823289,Competitors,2151621406,Competitors,2342187592,muse meta,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-11,2144823289,Competitors,2151621406,Competitors,2342167438,perplexityai,EXACT,RUNNING,30,0,43,0,0,0,0,0,0
+2026-10-11,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276955,ai agent app,BROAD,RUNNING,10,47.15,296,6,2,2,0,2,0
+2026-10-11,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276140,ai assistant app,BROAD,RUNNING,10,9.18,91,1,0,0,0,0,0
+2026-10-11,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276960,ai assistant apps,BROAD,RUNNING,10,12.78,104,2,0,0,0,0,0
+2026-10-11,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276943,ai assistant for android,BROAD,RUNNING,10,0,45,0,0,0,0,0,0
+2026-10-11,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276948,ai assistant online,BROAD,RUNNING,10,27.64,124,4,0,0,0,0,0
+2026-10-11,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276959,ai digital assistant,BROAD,RUNNING,10,20.83,258,3,1,1,0,1,0
+2026-10-11,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276138,ai helpers,BROAD,RUNNING,10,39.45,318,5,5,4,1,5,0
+2026-10-11,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276950,ai personal,BROAD,PAUSED,10,32.76,182,5,0,0,0,0,0
+2026-10-11,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276953,ai personal assistant app,BROAD,RUNNING,10,31.27,141,5,1,1,0,1,0
+2026-10-11,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276139,ai powered assistant,BROAD,RUNNING,10,27.84,132,4,1,1,0,1,0
+2026-10-11,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276944,ai powered personal assistant,BROAD,RUNNING,10,42.82,177,6,2,2,0,2,0
+2026-10-11,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276952,ai productivity assistant,BROAD,PAUSED,10,0,44,0,0,0,0,0,0
+2026-10-11,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276137,artificial intelligence assistant,BROAD,RUNNING,10,42.91,206,6,2,2,0,2,0
+2026-10-11,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276141,artificial intelligence virtual assistant,BROAD,RUNNING,10,33.19,170,6,1,1,0,1,0
+2026-10-11,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276945,assistant ai,BROAD,RUNNING,10,27.83,219,4,2,2,0,2,0
+2026-10-11,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276956,best ai assistant app,BROAD,RUNNING,10,15.41,104,3,0,0,0,0,0
+2026-10-11,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276962,best ai assistant for android,BROAD,RUNNING,10,2.8,23,1,0,0,0,0,0
+2026-10-11,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276947,best ai personal assistant,BROAD,RUNNING,10,6.85,30,1,1,1,0,1,0
+2026-10-11,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276946,best personal assistant ai,BROAD,RUNNING,10,0,29,0,0,0,0,0,0
+2026-10-11,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276954,digital assistant app,BROAD,RUNNING,10,9.07,49,2,0,0,0,0,0
+2026-10-11,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276961,digital personal assistant,BROAD,RUNNING,10,0,2,0,0,0,0,0,0
+2026-10-11,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276963,iphone ai assistant,BROAD,RUNNING,10,32.12,101,4,2,2,0,2,0
+2026-10-11,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276942,personal ai,BROAD,RUNNING,10,24.36,195,5,0,0,0,0,0
+2026-10-11,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276949,personal ai agent,BROAD,RUNNING,10,9.81,93,1,0,0,0,0,0
+2026-10-11,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276951,personal assistant app,BROAD,RUNNING,10,0,10,0,0,0,0,0,0
+2026-10-11,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276958,proactive ai assistant,BROAD,RUNNING,10,0,30,0,0,0,0,0,0
+2026-10-11,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276957,top ai assistant,BROAD,RUNNING,10,28.02,130,4,0,0,0,0,0
+2026-10-11,2144820683,General AI assistants,2151609067,General AI assistants,2342123557,ai agent app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-11,2144820683,General AI assistants,2151609067,General AI assistants,2342135361,ai assistant,EXACT,RUNNING,30,144.72,114,8,3,3,0,3,0
+2026-10-11,2144820683,General AI assistants,2151609067,General AI assistants,2342123542,ai assistant app,EXACT,RUNNING,30,0,7,0,0,0,0,0,0
+2026-10-11,2144820683,General AI assistants,2151609067,General AI assistants,2342123562,ai assistant apps,BROAD,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-11,2144820683,General AI assistants,2151609067,General AI assistants,2342123545,ai assistant for android,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-11,2144820683,General AI assistants,2151609067,General AI assistants,2344177296,ai assistant for business,EXACT,RUNNING,30,0,2,0,0,0,0,0,0
+2026-10-11,2144820683,General AI assistants,2151609067,General AI assistants,2342123550,ai assistant online,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-11,2144820683,General AI assistants,2151609067,General AI assistants,2344177295,ai business assistant,EXACT,RUNNING,30,25.9,7,1,0,0,0,0,0
+2026-10-11,2144820683,General AI assistants,2151609067,General AI assistants,2342123561,ai digital assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-11,2144820683,General AI assistants,2151609067,General AI assistants,2342123552,ai personal,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-11,2144820683,General AI assistants,2151609067,General AI assistants,2342123555,ai personal assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-11,2144820683,General AI assistants,2151609067,General AI assistants,2342119141,ai powered assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-11,2144820683,General AI assistants,2151609067,General AI assistants,2342123546,ai powered personal assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-11,2144820683,General AI assistants,2151609067,General AI assistants,2342123554,ai productivity assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-11,2144820683,General AI assistants,2151609067,General AI assistants,2342135591,ai virtual assistant,EXACT,RUNNING,30,22.9,7,2,0,0,0,0,0
+2026-10-11,2144820683,General AI assistants,2151609067,General AI assistants,2342148702,artificial assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-11,2144820683,General AI assistants,2151609067,General AI assistants,2342119140,artificial intelligence assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-11,2144820683,General AI assistants,2151609067,General AI assistants,2342141997,artificial intelligence personal assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-11,2144820683,General AI assistants,2151609067,General AI assistants,2342123543,artificial intelligence virtual assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-11,2144820683,General AI assistants,2151609067,General AI assistants,2342123547,assistant ai,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-11,2144820683,General AI assistants,2151609067,General AI assistants,2342123558,best ai assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-11,2144820683,General AI assistants,2151609067,General AI assistants,2342123564,best ai assistant for android,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-11,2144820683,General AI assistants,2151609067,General AI assistants,2342123549,best ai personal assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-11,2144820683,General AI assistants,2151609067,General AI assistants,2342123548,best personal assistant ai,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-11,2144820683,General AI assistants,2151609067,General AI assistants,2342123556,digital assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-11,2144820683,General AI assistants,2151609067,General AI assistants,2342123563,digital personal assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-11,2144820683,General AI assistants,2151609067,General AI assistants,2342123565,iphone ai assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-11,2144820683,General AI assistants,2151609067,General AI assistants,2342123544,personal ai,EXACT,RUNNING,30,0,1,0,0,0,0,0,0
+2026-10-11,2144820683,General AI assistants,2151609067,General AI assistants,2342123551,personal ai agent,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-11,2144820683,General AI assistants,2151609067,General AI assistants,2342123553,personal assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-11,2144820683,General AI assistants,2151609067,General AI assistants,2342123560,proactive ai assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-11,2144820683,General AI assistants,2151609067,General AI assistants,2342123559,top ai assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-11,2144818472,Brand,2151607398,Brand,2342115244,brett adcock ai,EXACT,RUNNING,2,0,0,0,0,0,0,0,0
+2026-10-11,2144818472,Brand,2151607398,Brand,2342115246,hark,EXACT,RUNNING,2,23.6,770,126,475,77,398,420,55
+2026-10-11,2144818472,Brand,2151607398,Brand,2342115243,hark ai,EXACT,RUNNING,2,7.23,95,15,62,12,50,57,5
+2026-10-11,2144818472,Brand,2151607398,Brand,2342115245,hark pro,EXACT,RUNNING,2,4.84,84,22,54,12,42,47,7
+2026-10-12,2144823289,Competitors,2151621406,Competitors,2342187594,comet ai,EXACT,RUNNING,30,0,3,0,0,0,0,0,0
+2026-10-12,2144823289,Competitors,2151621406,Competitors,2342167441,foai,EXACT,RUNNING,30,0,3,0,0,0,0,0,0
+2026-10-12,2144823289,Competitors,2151621406,Competitors,2349044811,grock,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-12,2144823289,Competitors,2151621406,Competitors,2349044814,grock ia,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-12,2144823289,Competitors,2151621406,Competitors,2349044813,grok,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-12,2144823289,Competitors,2151621406,Competitors,2349044815,grok ai,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-12,2144823289,Competitors,2151621406,Competitors,2349044810,grok ai free,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-12,2144823289,Competitors,2151621406,Competitors,2349044812,grok bot,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-12,2144823289,Competitors,2151621406,Competitors,2342167440,instinct ai,EXACT,RUNNING,30,78.86,255,6,2,2,0,2,0
+2026-10-12,2144823289,Competitors,2151621406,Competitors,2342167439,muse ai,EXACT,RUNNING,30,0,12,0,0,0,0,0,0
+2026-10-12,2144823289,Competitors,2151621406,Competitors,2342187593,muse from meta,EXACT,RUNNING,30,54.46,124,4,2,2,0,2,0
+2026-10-12,2144823289,Competitors,2151621406,Competitors,2342187592,muse meta,EXACT,RUNNING,30,0,4,0,0,0,0,0,0
+2026-10-12,2144823289,Competitors,2151621406,Competitors,2342167438,perplexityai,EXACT,RUNNING,30,28.84,39,1,0,0,0,0,0
+2026-10-12,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276955,ai agent app,BROAD,RUNNING,10,58.44,282,7,1,1,0,1,0
+2026-10-12,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276140,ai assistant app,BROAD,RUNNING,10,41.89,129,6,0,0,0,0,0
+2026-10-12,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276960,ai assistant apps,BROAD,RUNNING,10,39.02,73,6,1,1,0,1,0
+2026-10-12,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276943,ai assistant for android,BROAD,RUNNING,10,0,52,0,0,0,0,0,0
+2026-10-12,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276948,ai assistant online,BROAD,RUNNING,10,45.58,103,6,1,1,0,1,0
+2026-10-12,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276959,ai digital assistant,BROAD,RUNNING,10,23.38,224,3,0,0,0,0,0
+2026-10-12,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276138,ai helpers,BROAD,RUNNING,10,41.27,311,7,3,3,0,3,0
+2026-10-12,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276950,ai personal,BROAD,PAUSED,10,0,0,0,0,0,0,0,0
+2026-10-12,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276953,ai personal assistant app,BROAD,RUNNING,10,0,87,0,0,0,0,0,0
+2026-10-12,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276139,ai powered assistant,BROAD,RUNNING,10,18.33,97,2,0,0,0,0,0
+2026-10-12,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276944,ai powered personal assistant,BROAD,RUNNING,10,8.86,114,1,0,0,0,0,0
+2026-10-12,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276952,ai productivity assistant,BROAD,PAUSED,10,0,0,0,0,0,0,0,0
+2026-10-12,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276137,artificial intelligence assistant,BROAD,RUNNING,10,23.88,176,3,3,3,0,3,0
+2026-10-12,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276141,artificial intelligence virtual assistant,BROAD,RUNNING,10,50.87,242,9,2,1,1,2,0
+2026-10-12,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276945,assistant ai,BROAD,RUNNING,10,30.44,186,5,3,3,0,3,0
+2026-10-12,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276956,best ai assistant app,BROAD,RUNNING,10,25.99,98,3,2,2,0,2,0
+2026-10-12,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276962,best ai assistant for android,BROAD,RUNNING,10,1.87,34,1,1,1,0,1,0
+2026-10-12,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276947,best ai personal assistant,BROAD,RUNNING,10,0,39,0,0,0,0,0,0
+2026-10-12,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276946,best personal assistant ai,BROAD,RUNNING,10,0,41,0,0,0,0,0,0
+2026-10-12,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276954,digital assistant app,BROAD,RUNNING,10,9.8,51,1,0,0,0,0,0
+2026-10-12,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276961,digital personal assistant,BROAD,RUNNING,10,0,3,0,0,0,0,0,0
+2026-10-12,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276963,iphone ai assistant,BROAD,RUNNING,10,14.63,81,2,0,0,0,0,0
+2026-10-12,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276942,personal ai,BROAD,RUNNING,10,28.81,183,6,2,1,1,2,0
+2026-10-12,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276949,personal ai agent,BROAD,RUNNING,10,6.06,121,1,0,0,0,0,0
+2026-10-12,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276951,personal assistant app,BROAD,RUNNING,10,0,12,0,0,0,0,0,0
+2026-10-12,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276958,proactive ai assistant,BROAD,RUNNING,10,0,21,0,0,0,0,0,0
+2026-10-12,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276957,top ai assistant,BROAD,RUNNING,10,34.86,122,4,2,2,0,2,0
+2026-10-12,2144820683,General AI assistants,2151609067,General AI assistants,2342123557,ai agent app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-12,2144820683,General AI assistants,2151609067,General AI assistants,2342135361,ai assistant,EXACT,RUNNING,30,131.08,107,8,3,3,0,3,0
+2026-10-12,2144820683,General AI assistants,2151609067,General AI assistants,2342123542,ai assistant app,EXACT,RUNNING,30,0,2,0,0,0,0,0,0
+2026-10-12,2144820683,General AI assistants,2151609067,General AI assistants,2342123562,ai assistant apps,BROAD,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-12,2144820683,General AI assistants,2151609067,General AI assistants,2342123545,ai assistant for android,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-12,2144820683,General AI assistants,2151609067,General AI assistants,2344177296,ai assistant for business,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-12,2144820683,General AI assistants,2151609067,General AI assistants,2342123550,ai assistant online,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-12,2144820683,General AI assistants,2151609067,General AI assistants,2344177295,ai business assistant,EXACT,RUNNING,30,0,8,0,0,0,0,0,0
+2026-10-12,2144820683,General AI assistants,2151609067,General AI assistants,2342123561,ai digital assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-12,2144820683,General AI assistants,2151609067,General AI assistants,2342123552,ai personal,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-12,2144820683,General AI assistants,2151609067,General AI assistants,2342123555,ai personal assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-12,2144820683,General AI assistants,2151609067,General AI assistants,2342119141,ai powered assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-12,2144820683,General AI assistants,2151609067,General AI assistants,2342123546,ai powered personal assistant,EXACT,RUNNING,30,0,1,0,0,0,0,0,0
+2026-10-12,2144820683,General AI assistants,2151609067,General AI assistants,2342123554,ai productivity assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-12,2144820683,General AI assistants,2151609067,General AI assistants,2342135591,ai virtual assistant,EXACT,RUNNING,30,27.16,5,1,0,0,0,0,0
+2026-10-12,2144820683,General AI assistants,2151609067,General AI assistants,2342148702,artificial assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-12,2144820683,General AI assistants,2151609067,General AI assistants,2342119140,artificial intelligence assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-12,2144820683,General AI assistants,2151609067,General AI assistants,2342141997,artificial intelligence personal assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-12,2144820683,General AI assistants,2151609067,General AI assistants,2342123543,artificial intelligence virtual assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-12,2144820683,General AI assistants,2151609067,General AI assistants,2342123547,assistant ai,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-12,2144820683,General AI assistants,2151609067,General AI assistants,2342123558,best ai assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-12,2144820683,General AI assistants,2151609067,General AI assistants,2342123564,best ai assistant for android,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-12,2144820683,General AI assistants,2151609067,General AI assistants,2342123549,best ai personal assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-12,2144820683,General AI assistants,2151609067,General AI assistants,2342123548,best personal assistant ai,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-12,2144820683,General AI assistants,2151609067,General AI assistants,2342123556,digital assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-12,2144820683,General AI assistants,2151609067,General AI assistants,2342123563,digital personal assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-12,2144820683,General AI assistants,2151609067,General AI assistants,2342123565,iphone ai assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-12,2144820683,General AI assistants,2151609067,General AI assistants,2342123544,personal ai,EXACT,RUNNING,30,0,1,0,0,0,0,0,0
+2026-10-12,2144820683,General AI assistants,2151609067,General AI assistants,2342123551,personal ai agent,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-12,2144820683,General AI assistants,2151609067,General AI assistants,2342123553,personal assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-12,2144820683,General AI assistants,2151609067,General AI assistants,2342123560,proactive ai assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-12,2144820683,General AI assistants,2151609067,General AI assistants,2342123559,top ai assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-12,2144818472,Brand,2151607398,Brand,2342115244,brett adcock ai,EXACT,RUNNING,2,0,0,0,0,0,0,0,0
+2026-10-12,2144818472,Brand,2151607398,Brand,2342115246,hark,EXACT,RUNNING,2,23.14,732,118,447,74,373,397,50
+2026-10-12,2144818472,Brand,2151607398,Brand,2342115243,hark ai,EXACT,RUNNING,2,8.05,126,23,85,18,67,81,4
+2026-10-12,2144818472,Brand,2151607398,Brand,2342115245,hark pro,EXACT,RUNNING,2,6.74,106,28,79,24,55,72,7
+2026-10-13,2144823289,Competitors,2151621406,Competitors,2342187594,comet ai,EXACT,RUNNING,30,0,2,0,0,0,0,0,0
+2026-10-13,2144823289,Competitors,2151621406,Competitors,2342167441,foai,EXACT,RUNNING,30,0,6,0,0,0,0,0,0
+2026-10-13,2144823289,Competitors,2151621406,Competitors,2349044811,grock,EXACT,RUNNING,30,3.58,12,1,0,0,0,0,0
+2026-10-13,2144823289,Competitors,2151621406,Competitors,2349044814,grock ia,EXACT,RUNNING,30,0,7,0,0,0,0,0,0
+2026-10-13,2144823289,Competitors,2151621406,Competitors,2349044813,grok,EXACT,RUNNING,30,0,1,0,0,0,0,0,0
+2026-10-13,2144823289,Competitors,2151621406,Competitors,2349044815,grok ai,EXACT,RUNNING,30,194.01,460,11,3,3,0,3,0
+2026-10-13,2144823289,Competitors,2151621406,Competitors,2349044810,grok ai free,EXACT,RUNNING,30,0,29,0,0,0,0,0,0
+2026-10-13,2144823289,Competitors,2151621406,Competitors,2349044812,grok bot,EXACT,RUNNING,30,84.5,301,6,2,2,0,2,0
+2026-10-13,2144823289,Competitors,2151621406,Competitors,2342167440,instinct ai,EXACT,RUNNING,30,13.75,200,1,0,0,0,0,0
+2026-10-13,2144823289,Competitors,2151621406,Competitors,2342167439,muse ai,EXACT,RUNNING,30,0,5,0,0,0,0,0,0
+2026-10-13,2144823289,Competitors,2151621406,Competitors,2342187593,muse from meta,EXACT,RUNNING,30,14.09,97,1,0,0,0,0,0
+2026-10-13,2144823289,Competitors,2151621406,Competitors,2342187592,muse meta,EXACT,RUNNING,30,0,1,0,0,0,0,0,0
+2026-10-13,2144823289,Competitors,2151621406,Competitors,2342167438,perplexityai,EXACT,RUNNING,30,9.32,9,1,0,0,0,0,0
+2026-10-13,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276955,ai agent app,BROAD,RUNNING,10,33.51,258,5,0,0,0,0,0
+2026-10-13,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276140,ai assistant app,BROAD,RUNNING,10,21.66,107,3,1,1,0,1,0
+2026-10-13,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276960,ai assistant apps,BROAD,RUNNING,10,25.78,96,3,0,0,0,0,0
+2026-10-13,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276943,ai assistant for android,BROAD,RUNNING,10,0,2,0,0,0,0,0,0
+2026-10-13,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276948,ai assistant online,BROAD,RUNNING,10,19.61,96,3,1,1,0,1,0
+2026-10-13,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276959,ai digital assistant,BROAD,RUNNING,10,31.93,222,4,0,0,0,0,0
+2026-10-13,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276138,ai helpers,BROAD,RUNNING,10,55.56,502,7,1,1,0,1,0
+2026-10-13,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276950,ai personal,BROAD,PAUSED,10,0,0,0,0,0,0,0,0
+2026-10-13,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276953,ai personal assistant app,BROAD,RUNNING,10,27.02,98,4,1,1,0,1,0
+2026-10-13,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276139,ai powered assistant,BROAD,RUNNING,10,9.77,152,1,0,0,0,0,0
+2026-10-13,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276944,ai powered personal assistant,BROAD,RUNNING,10,23.77,138,3,1,1,0,1,0
+2026-10-13,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276952,ai productivity assistant,BROAD,PAUSED,10,0,0,0,0,0,0,0,0
+2026-10-13,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276137,artificial intelligence assistant,BROAD,RUNNING,10,31.16,238,6,0,0,0,0,0
+2026-10-13,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276141,artificial intelligence virtual assistant,BROAD,RUNNING,10,71.15,283,9,0,0,0,0,0
+2026-10-13,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276945,assistant ai,BROAD,RUNNING,10,14.86,207,2,0,0,0,0,0
+2026-10-13,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276956,best ai assistant app,BROAD,RUNNING,10,17.79,97,2,0,0,0,0,0
+2026-10-13,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276962,best ai assistant for android,BROAD,RUNNING,10,7.93,72,1,0,0,0,0,0
+2026-10-13,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276947,best ai personal assistant,BROAD,RUNNING,10,9.57,48,1,0,0,0,0,0
+2026-10-13,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276946,best personal assistant ai,BROAD,RUNNING,10,7.75,31,1,0,0,0,0,0
+2026-10-13,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276954,digital assistant app,BROAD,RUNNING,10,25.91,66,3,0,0,0,0,0
+2026-10-13,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276961,digital personal assistant,BROAD,RUNNING,10,0,5,0,0,0,0,0,0
+2026-10-13,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276963,iphone ai assistant,BROAD,RUNNING,10,3.04,113,2,0,0,0,0,0
+2026-10-13,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276942,personal ai,BROAD,RUNNING,10,14.44,182,2,1,0,1,1,0
+2026-10-13,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276949,personal ai agent,BROAD,RUNNING,10,7.82,97,1,0,0,0,0,0
+2026-10-13,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276951,personal assistant app,BROAD,RUNNING,10,6.01,10,1,0,0,0,0,0
+2026-10-13,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276958,proactive ai assistant,BROAD,RUNNING,10,9.75,5,1,0,0,0,0,0
+2026-10-13,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276957,top ai assistant,BROAD,RUNNING,10,22.87,148,3,0,0,0,0,0
+2026-10-13,2144820683,General AI assistants,2151609067,General AI assistants,2342123557,ai agent app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-13,2144820683,General AI assistants,2151609067,General AI assistants,2342135361,ai assistant,EXACT,RUNNING,30,266.84,100,14,6,6,0,5,1
+2026-10-13,2144820683,General AI assistants,2151609067,General AI assistants,2342123542,ai assistant app,EXACT,RUNNING,30,0,2,0,0,0,0,0,0
+2026-10-13,2144820683,General AI assistants,2151609067,General AI assistants,2342123562,ai assistant apps,BROAD,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-13,2144820683,General AI assistants,2151609067,General AI assistants,2342123545,ai assistant for android,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-13,2144820683,General AI assistants,2151609067,General AI assistants,2344177296,ai assistant for business,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-13,2144820683,General AI assistants,2151609067,General AI assistants,2342123550,ai assistant online,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-13,2144820683,General AI assistants,2151609067,General AI assistants,2344177295,ai business assistant,EXACT,RUNNING,30,17.75,6,1,0,0,0,0,0
+2026-10-13,2144820683,General AI assistants,2151609067,General AI assistants,2342123561,ai digital assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-13,2144820683,General AI assistants,2151609067,General AI assistants,2342123552,ai personal,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-13,2144820683,General AI assistants,2151609067,General AI assistants,2342123555,ai personal assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-13,2144820683,General AI assistants,2151609067,General AI assistants,2342119141,ai powered assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-13,2144820683,General AI assistants,2151609067,General AI assistants,2342123546,ai powered personal assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-13,2144820683,General AI assistants,2151609067,General AI assistants,2342123554,ai productivity assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-13,2144820683,General AI assistants,2151609067,General AI assistants,2342135591,ai virtual assistant,EXACT,RUNNING,30,0,3,0,0,0,0,0,0
+2026-10-13,2144820683,General AI assistants,2151609067,General AI assistants,2342148702,artificial assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-13,2144820683,General AI assistants,2151609067,General AI assistants,2342119140,artificial intelligence assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-13,2144820683,General AI assistants,2151609067,General AI assistants,2342141997,artificial intelligence personal assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-13,2144820683,General AI assistants,2151609067,General AI assistants,2342123543,artificial intelligence virtual assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-13,2144820683,General AI assistants,2151609067,General AI assistants,2342123547,assistant ai,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-13,2144820683,General AI assistants,2151609067,General AI assistants,2342123558,best ai assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-13,2144820683,General AI assistants,2151609067,General AI assistants,2342123564,best ai assistant for android,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-13,2144820683,General AI assistants,2151609067,General AI assistants,2342123549,best ai personal assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-13,2144820683,General AI assistants,2151609067,General AI assistants,2342123548,best personal assistant ai,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-13,2144820683,General AI assistants,2151609067,General AI assistants,2342123556,digital assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-13,2144820683,General AI assistants,2151609067,General AI assistants,2342123563,digital personal assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-13,2144820683,General AI assistants,2151609067,General AI assistants,2342123565,iphone ai assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-13,2144820683,General AI assistants,2151609067,General AI assistants,2342123544,personal ai,EXACT,RUNNING,30,17.43,1,1,0,0,0,0,0
+2026-10-13,2144820683,General AI assistants,2151609067,General AI assistants,2342123551,personal ai agent,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-13,2144820683,General AI assistants,2151609067,General AI assistants,2342123553,personal assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-13,2144820683,General AI assistants,2151609067,General AI assistants,2342123560,proactive ai assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-13,2144820683,General AI assistants,2151609067,General AI assistants,2342123559,top ai assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-13,2144818472,Brand,2151607398,Brand,2342115244,brett adcock ai,EXACT,RUNNING,2,0,0,0,0,0,0,0,0
+2026-10-13,2144818472,Brand,2151607398,Brand,2342115246,hark,EXACT,RUNNING,2,30.69,688,152,422,81,341,359,63
+2026-10-13,2144818472,Brand,2151607398,Brand,2342115243,hark ai,EXACT,RUNNING,2,5.13,87,15,62,10,52,58,4
+2026-10-13,2144818472,Brand,2151607398,Brand,2342115245,hark pro,EXACT,RUNNING,2,4.43,87,19,54,12,42,51,3
+2026-10-14,2144823289,Competitors,2151621406,Competitors,2342187594,comet ai,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-14,2144823289,Competitors,2151621406,Competitors,2342167441,foai,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-14,2144823289,Competitors,2151621406,Competitors,2349044811,grock,EXACT,RUNNING,30,0,24,0,0,0,0,0,0
+2026-10-14,2144823289,Competitors,2151621406,Competitors,2349044814,grock ia,EXACT,RUNNING,30,0,13,0,0,0,0,0,0
+2026-10-14,2144823289,Competitors,2151621406,Competitors,2349044813,grok,EXACT,RUNNING,60,0,2,0,0,0,0,0,0
+2026-10-14,2144823289,Competitors,2151621406,Competitors,2349044815,grok ai,EXACT,RUNNING,60,172.78,320,8,4,4,0,4,0
+2026-10-14,2144823289,Competitors,2151621406,Competitors,2349044810,grok ai free,EXACT,RUNNING,60,0,12,0,0,0,0,0,0
+2026-10-14,2144823289,Competitors,2151621406,Competitors,2349044812,grok bot,EXACT,RUNNING,60,115.72,171,10,1,1,0,1,0
+2026-10-14,2144823289,Competitors,2151621406,Competitors,2342167440,instinct ai,EXACT,RUNNING,30,0,33,0,0,0,0,0,0
+2026-10-14,2144823289,Competitors,2151621406,Competitors,2342167439,muse ai,EXACT,RUNNING,60,0,1,0,0,0,0,0,0
+2026-10-14,2144823289,Competitors,2151621406,Competitors,2342187593,muse from meta,EXACT,RUNNING,60,0,12,0,0,0,0,0,0
+2026-10-14,2144823289,Competitors,2151621406,Competitors,2342187592,muse meta,EXACT,RUNNING,60,0,0,0,0,0,0,0,0
+2026-10-14,2144823289,Competitors,2151621406,Competitors,2342167438,perplexityai,EXACT,PAUSED,30,0,1,0,0,0,0,0,0
+2026-10-14,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276955,ai agent app,BROAD,RUNNING,10,104.55,436,14,1,1,0,1,0
+2026-10-14,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276140,ai assistant app,BROAD,RUNNING,10,21.9,114,3,0,0,0,0,0
+2026-10-14,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276960,ai assistant apps,BROAD,RUNNING,10,34.45,98,5,0,0,0,0,0
+2026-10-14,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276943,ai assistant for android,BROAD,RUNNING,10,0,0,0,0,0,0,0,0
+2026-10-14,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276948,ai assistant online,BROAD,RUNNING,10,13.46,121,2,0,0,0,0,0
+2026-10-14,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276959,ai digital assistant,BROAD,RUNNING,10,7.39,25,2,0,0,0,0,0
+2026-10-14,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276138,ai helpers,BROAD,RUNNING,10,55.11,374,9,3,3,0,3,0
+2026-10-14,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276950,ai personal,BROAD,PAUSED,10,0,0,0,0,0,0,0,0
+2026-10-14,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276953,ai personal assistant app,BROAD,RUNNING,10,30.95,136,4,0,0,0,0,0
+2026-10-14,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276139,ai powered assistant,BROAD,RUNNING,10,5.85,15,1,0,0,0,0,0
+2026-10-14,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276944,ai powered personal assistant,BROAD,RUNNING,10,0,9,0,0,0,0,0,0
+2026-10-14,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276952,ai productivity assistant,BROAD,PAUSED,10,0,0,0,0,0,0,0,0
+2026-10-14,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276137,artificial intelligence assistant,BROAD,RUNNING,10,54.67,338,9,0,0,0,0,0
+2026-10-14,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276141,artificial intelligence virtual assistant,BROAD,RUNNING,10,50.37,201,6,1,1,0,1,0
+2026-10-14,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276945,assistant ai,BROAD,RUNNING,10,35.65,221,5,0,0,0,0,0
+2026-10-14,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276956,best ai assistant app,BROAD,RUNNING,10,0,10,0,0,0,0,0,0
+2026-10-14,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276962,best ai assistant for android,BROAD,RUNNING,10,0,40,0,0,0,0,0,0
+2026-10-14,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276947,best ai personal assistant,BROAD,RUNNING,10,7.2,44,1,0,0,0,0,0
+2026-10-14,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276946,best personal assistant ai,BROAD,RUNNING,10,19.55,46,2,0,0,0,0,0
+2026-10-14,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276954,digital assistant app,BROAD,PAUSED,10,12.02,84,2,0,0,0,0,0
+2026-10-14,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276961,digital personal assistant,BROAD,RUNNING,10,0,10,0,0,0,0,0,0
+2026-10-14,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276963,iphone ai assistant,BROAD,RUNNING,10,7.52,91,1,0,0,0,0,0
+2026-10-14,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276942,personal ai,BROAD,RUNNING,10,18.06,202,3,0,0,0,0,0
+2026-10-14,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276949,personal ai agent,BROAD,RUNNING,10,16.83,123,2,0,0,0,0,0
+2026-10-14,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276951,personal assistant app,BROAD,RUNNING,10,0,6,0,0,0,0,0,0
+2026-10-14,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276958,proactive ai assistant,BROAD,RUNNING,10,0,0,0,0,0,0,0,0
+2026-10-14,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276957,top ai assistant,BROAD,RUNNING,10,9.83,99,1,0,0,0,0,0
+2026-10-14,2144820683,General AI assistants,2151609067,General AI assistants,2342123557,ai agent app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-14,2144820683,General AI assistants,2151609067,General AI assistants,2342135361,ai assistant,EXACT,RUNNING,60,161.07,137,9,4,4,0,4,0
+2026-10-14,2144820683,General AI assistants,2151609067,General AI assistants,2342123542,ai assistant app,EXACT,RUNNING,30,25.4,3,1,0,0,0,0,0
+2026-10-14,2144820683,General AI assistants,2151609067,General AI assistants,2342123562,ai assistant apps,BROAD,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-14,2144820683,General AI assistants,2151609067,General AI assistants,2342123545,ai assistant for android,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-14,2144820683,General AI assistants,2151609067,General AI assistants,2344177296,ai assistant for business,EXACT,RUNNING,30,0,3,0,0,0,0,0,0
+2026-10-14,2144820683,General AI assistants,2151609067,General AI assistants,2342123550,ai assistant online,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-14,2144820683,General AI assistants,2151609067,General AI assistants,2344177295,ai business assistant,EXACT,RUNNING,30,27.02,9,2,1,1,0,1,0
+2026-10-14,2144820683,General AI assistants,2151609067,General AI assistants,2342123561,ai digital assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-14,2144820683,General AI assistants,2151609067,General AI assistants,2342123552,ai personal,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-14,2144820683,General AI assistants,2151609067,General AI assistants,2342123555,ai personal assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-14,2144820683,General AI assistants,2151609067,General AI assistants,2342119141,ai powered assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-14,2144820683,General AI assistants,2151609067,General AI assistants,2342123546,ai powered personal assistant,EXACT,RUNNING,30,0,1,0,0,0,0,0,0
+2026-10-14,2144820683,General AI assistants,2151609067,General AI assistants,2342123554,ai productivity assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-14,2144820683,General AI assistants,2151609067,General AI assistants,2342135591,ai virtual assistant,EXACT,RUNNING,30,0,3,0,0,0,0,0,0
+2026-10-14,2144820683,General AI assistants,2151609067,General AI assistants,2342148702,artificial assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-14,2144820683,General AI assistants,2151609067,General AI assistants,2342119140,artificial intelligence assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-14,2144820683,General AI assistants,2151609067,General AI assistants,2342141997,artificial intelligence personal assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-14,2144820683,General AI assistants,2151609067,General AI assistants,2342123543,artificial intelligence virtual assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-14,2144820683,General AI assistants,2151609067,General AI assistants,2342123547,assistant ai,EXACT,RUNNING,30,16.71,1,1,1,1,0,1,0
+2026-10-14,2144820683,General AI assistants,2151609067,General AI assistants,2342123558,best ai assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-14,2144820683,General AI assistants,2151609067,General AI assistants,2342123564,best ai assistant for android,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-14,2144820683,General AI assistants,2151609067,General AI assistants,2342123549,best ai personal assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-14,2144820683,General AI assistants,2151609067,General AI assistants,2342123548,best personal assistant ai,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-14,2144820683,General AI assistants,2151609067,General AI assistants,2342123556,digital assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-14,2144820683,General AI assistants,2151609067,General AI assistants,2342123563,digital personal assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-14,2144820683,General AI assistants,2151609067,General AI assistants,2342123565,iphone ai assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-14,2144820683,General AI assistants,2151609067,General AI assistants,2342123544,personal ai,EXACT,RUNNING,30,0,5,0,0,0,0,0,0
+2026-10-14,2144820683,General AI assistants,2151609067,General AI assistants,2342123551,personal ai agent,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-14,2144820683,General AI assistants,2151609067,General AI assistants,2342123553,personal assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-14,2144820683,General AI assistants,2151609067,General AI assistants,2342123560,proactive ai assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-14,2144820683,General AI assistants,2151609067,General AI assistants,2342123559,top ai assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-14,2144818472,Brand,2151607398,Brand,2342115244,brett adcock ai,EXACT,RUNNING,2,0,0,0,0,0,0,0,0
+2026-10-14,2144818472,Brand,2151607398,Brand,2342115246,hark,EXACT,RUNNING,2,25.79,617,127,362,73,289,321,41
+2026-10-14,2144818472,Brand,2151607398,Brand,2342115243,hark ai,EXACT,RUNNING,2,2.41,39,6,28,6,22,26,2
+2026-10-14,2144818472,Brand,2151607398,Brand,2342115245,hark pro,EXACT,RUNNING,2,17.27,136,42,97,30,67,84,13
+2026-10-15,2144823289,Competitors,2151621406,Competitors,2342187594,comet ai,EXACT,RUNNING,30,0,3,0,0,0,0,0,0
+2026-10-15,2144823289,Competitors,2151621406,Competitors,2342167441,foai,EXACT,RUNNING,30,0,1,0,0,0,0,0,0
+2026-10-15,2144823289,Competitors,2151621406,Competitors,2349044811,grock,EXACT,RUNNING,30,0,24,0,0,0,0,0,0
+2026-10-15,2144823289,Competitors,2151621406,Competitors,2349044814,grock ia,EXACT,RUNNING,30,18.45,25,1,0,0,0,0,0
+2026-10-15,2144823289,Competitors,2151621406,Competitors,2349044813,grok,EXACT,RUNNING,60,145.32,432,6,2,2,0,2,0
+2026-10-15,2144823289,Competitors,2151621406,Competitors,2349044815,grok ai,EXACT,RUNNING,60,132.5,273,5,1,1,0,1,0
+2026-10-15,2144823289,Competitors,2151621406,Competitors,2349044810,grok ai free,EXACT,RUNNING,60,33.74,39,2,0,0,0,0,0
+2026-10-15,2144823289,Competitors,2151621406,Competitors,2349044812,grok bot,EXACT,RUNNING,60,17.73,172,2,0,0,0,0,0
+2026-10-15,2144823289,Competitors,2151621406,Competitors,2342167440,instinct ai,EXACT,RUNNING,30,0,56,0,1,1,0,1,0
+2026-10-15,2144823289,Competitors,2151621406,Competitors,2342167439,muse ai,EXACT,RUNNING,60,0,6,0,0,0,0,0,0
+2026-10-15,2144823289,Competitors,2151621406,Competitors,2342187593,muse from meta,EXACT,RUNNING,60,0,12,0,0,0,0,0,0
+2026-10-15,2144823289,Competitors,2151621406,Competitors,2342187592,muse meta,EXACT,RUNNING,60,0,0,0,0,0,0,0,0
+2026-10-15,2144823289,Competitors,2151621406,Competitors,2342167438,perplexityai,EXACT,PAUSED,30,0,0,0,0,0,0,0,0
+2026-10-15,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276955,ai agent app,BROAD,RUNNING,10,82.04,548,12,2,2,0,2,0
+2026-10-15,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276140,ai assistant app,BROAD,RUNNING,10,25.07,208,3,0,0,0,0,0
+2026-10-15,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276960,ai assistant apps,BROAD,RUNNING,10,9.49,156,1,0,0,0,0,0
+2026-10-15,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276943,ai assistant for android,BROAD,RUNNING,10,0,15,0,0,0,0,0,0
+2026-10-15,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276948,ai assistant online,BROAD,RUNNING,10,17.3,123,2,1,1,0,1,0
+2026-10-15,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276959,ai digital assistant,BROAD,RUNNING,10,22.3,190,3,0,0,0,0,0
+2026-10-15,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276138,ai helpers,BROAD,RUNNING,10,15.51,366,3,0,0,0,0,0
+2026-10-15,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276950,ai personal,BROAD,PAUSED,10,0,0,0,0,0,0,0,0
+2026-10-15,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276953,ai personal assistant app,BROAD,RUNNING,10,49.52,229,8,2,2,0,2,0
+2026-10-15,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276139,ai powered assistant,BROAD,RUNNING,10,17.35,75,3,0,0,0,0,0
+2026-10-15,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276944,ai powered personal assistant,BROAD,RUNNING,10,6.35,51,1,0,0,0,0,0
+2026-10-15,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276952,ai productivity assistant,BROAD,PAUSED,10,0,0,0,0,0,0,0,0
+2026-10-15,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276137,artificial intelligence assistant,BROAD,RUNNING,10,16.99,191,3,1,1,0,1,0
+2026-10-15,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276141,artificial intelligence virtual assistant,BROAD,RUNNING,10,11.25,168,2,0,0,0,0,0
+2026-10-15,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276945,assistant ai,BROAD,RUNNING,10,61.43,250,8,0,0,0,0,0
+2026-10-15,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276956,best ai assistant app,BROAD,RUNNING,10,66.26,89,8,1,1,0,1,0
+2026-10-15,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276962,best ai assistant for android,BROAD,RUNNING,10,0,35,0,0,0,0,0,0
+2026-10-15,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276947,best ai personal assistant,BROAD,RUNNING,10,22.69,66,4,1,1,0,1,0
+2026-10-15,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276946,best personal assistant ai,BROAD,RUNNING,10,14.49,36,2,1,1,0,1,0
+2026-10-15,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276954,digital assistant app,BROAD,PAUSED,10,0,0,0,0,0,0,0,0
+2026-10-15,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276961,digital personal assistant,BROAD,RUNNING,10,0,10,0,0,0,0,0,0
+2026-10-15,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276963,iphone ai assistant,BROAD,RUNNING,10,16.69,104,3,0,0,0,0,0
+2026-10-15,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276942,personal ai,BROAD,RUNNING,10,0,254,0,0,0,0,0,0
+2026-10-15,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276949,personal ai agent,BROAD,RUNNING,10,24.19,207,3,2,2,0,2,0
+2026-10-15,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276951,personal assistant app,BROAD,RUNNING,10,2.4,12,1,0,0,0,0,0
+2026-10-15,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276958,proactive ai assistant,BROAD,RUNNING,10,0,7,0,0,0,0,0,0
+2026-10-15,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276957,top ai assistant,BROAD,RUNNING,10,31.9,148,4,1,1,0,1,0
+2026-10-15,2144820683,General AI assistants,2151609067,General AI assistants,2342123557,ai agent app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-15,2144820683,General AI assistants,2151609067,General AI assistants,2342135361,ai assistant,EXACT,RUNNING,60,164.13,131,7,3,3,0,3,0
+2026-10-15,2144820683,General AI assistants,2151609067,General AI assistants,2342123542,ai assistant app,EXACT,RUNNING,30,0,2,0,0,0,0,0,0
+2026-10-15,2144820683,General AI assistants,2151609067,General AI assistants,2342123562,ai assistant apps,BROAD,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-15,2144820683,General AI assistants,2151609067,General AI assistants,2342123545,ai assistant for android,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-15,2144820683,General AI assistants,2151609067,General AI assistants,2344177296,ai assistant for business,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-15,2144820683,General AI assistants,2151609067,General AI assistants,2342123550,ai assistant online,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-15,2144820683,General AI assistants,2151609067,General AI assistants,2344177295,ai business assistant,EXACT,RUNNING,30,0,13,0,0,0,0,0,0
+2026-10-15,2144820683,General AI assistants,2151609067,General AI assistants,2342123561,ai digital assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-15,2144820683,General AI assistants,2151609067,General AI assistants,2342123552,ai personal,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-15,2144820683,General AI assistants,2151609067,General AI assistants,2342123555,ai personal assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-15,2144820683,General AI assistants,2151609067,General AI assistants,2342119141,ai powered assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-15,2144820683,General AI assistants,2151609067,General AI assistants,2342123546,ai powered personal assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-15,2144820683,General AI assistants,2151609067,General AI assistants,2342123554,ai productivity assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-15,2144820683,General AI assistants,2151609067,General AI assistants,2342135591,ai virtual assistant,EXACT,RUNNING,30,0,2,0,0,0,0,0,0
+2026-10-15,2144820683,General AI assistants,2151609067,General AI assistants,2342148702,artificial assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-15,2144820683,General AI assistants,2151609067,General AI assistants,2342119140,artificial intelligence assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-15,2144820683,General AI assistants,2151609067,General AI assistants,2342141997,artificial intelligence personal assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-15,2144820683,General AI assistants,2151609067,General AI assistants,2342123543,artificial intelligence virtual assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-15,2144820683,General AI assistants,2151609067,General AI assistants,2342123547,assistant ai,EXACT,RUNNING,30,0,1,0,0,0,0,0,0
+2026-10-15,2144820683,General AI assistants,2151609067,General AI assistants,2342123558,best ai assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-15,2144820683,General AI assistants,2151609067,General AI assistants,2342123564,best ai assistant for android,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-15,2144820683,General AI assistants,2151609067,General AI assistants,2342123549,best ai personal assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-15,2144820683,General AI assistants,2151609067,General AI assistants,2342123548,best personal assistant ai,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-15,2144820683,General AI assistants,2151609067,General AI assistants,2342123556,digital assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-15,2144820683,General AI assistants,2151609067,General AI assistants,2342123563,digital personal assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-15,2144820683,General AI assistants,2151609067,General AI assistants,2342123565,iphone ai assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-15,2144820683,General AI assistants,2151609067,General AI assistants,2342123544,personal ai,EXACT,RUNNING,30,0,6,0,0,0,0,0,0
+2026-10-15,2144820683,General AI assistants,2151609067,General AI assistants,2342123551,personal ai agent,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-15,2144820683,General AI assistants,2151609067,General AI assistants,2342123553,personal assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-15,2144820683,General AI assistants,2151609067,General AI assistants,2342123560,proactive ai assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-15,2144820683,General AI assistants,2151609067,General AI assistants,2342123559,top ai assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-15,2144818472,Brand,2151607398,Brand,2342115244,brett adcock ai,EXACT,RUNNING,2,0,0,0,0,0,0,0,0
+2026-10-15,2144818472,Brand,2151607398,Brand,2342115246,hark,EXACT,RUNNING,2,23.78,582,117,342,79,263,296,46
+2026-10-15,2144818472,Brand,2151607398,Brand,2342115243,hark ai,EXACT,RUNNING,2,9.96,94,19,63,9,54,56,7
+2026-10-15,2144818472,Brand,2151607398,Brand,2342115245,hark pro,EXACT,RUNNING,2,4,53,18,35,13,22,31,4
+2026-10-16,2144823289,Competitors,2151621406,Competitors,2342187594,comet ai,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-16,2144823289,Competitors,2151621406,Competitors,2342167441,foai,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-16,2144823289,Competitors,2151621406,Competitors,2349044811,grock,EXACT,RUNNING,30,0,2,0,0,0,0,0,0
+2026-10-16,2144823289,Competitors,2151621406,Competitors,2349044814,grock ia,EXACT,RUNNING,30,0,2,0,0,0,0,0,0
+2026-10-16,2144823289,Competitors,2151621406,Competitors,2349044813,grok,EXACT,RUNNING,60,0,8,0,0,0,0,0,0
+2026-10-16,2144823289,Competitors,2151621406,Competitors,2349044815,grok ai,EXACT,RUNNING,60,268.02,477,8,1,1,0,1,0
+2026-10-16,2144823289,Competitors,2151621406,Competitors,2349044810,grok ai free,EXACT,RUNNING,60,44.13,14,1,0,0,0,0,0
+2026-10-16,2144823289,Competitors,2151621406,Competitors,2349044812,grok bot,EXACT,RUNNING,60,0,33,0,0,0,0,0,0
+2026-10-16,2144823289,Competitors,2151621406,Competitors,2342167440,instinct ai,EXACT,RUNNING,30,0,1,0,0,0,0,0,0
+2026-10-16,2144823289,Competitors,2151621406,Competitors,2342167439,muse ai,EXACT,RUNNING,60,0,1,0,0,0,0,0,0
+2026-10-16,2144823289,Competitors,2151621406,Competitors,2342187593,muse from meta,EXACT,RUNNING,60,0,1,0,0,0,0,0,0
+2026-10-16,2144823289,Competitors,2151621406,Competitors,2342187592,muse meta,EXACT,RUNNING,60,0,0,0,0,0,0,0,0
+2026-10-16,2144823289,Competitors,2151621406,Competitors,2342167438,perplexityai,EXACT,PAUSED,30,0,0,0,0,0,0,0,0
+2026-10-16,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276955,ai agent app,BROAD,RUNNING,10,59.17,394,9,2,2,0,2,0
+2026-10-16,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276140,ai assistant app,BROAD,RUNNING,10,26.56,156,5,0,0,0,0,0
+2026-10-16,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276960,ai assistant apps,BROAD,RUNNING,10,13.4,107,2,1,1,0,1,0
+2026-10-16,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276943,ai assistant for android,BROAD,RUNNING,10,5.02,26,1,0,0,0,0,0
+2026-10-16,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276948,ai assistant online,BROAD,RUNNING,10,16.35,140,2,0,0,0,0,0
+2026-10-16,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276959,ai digital assistant,BROAD,RUNNING,10,16.35,250,2,0,0,0,0,0
+2026-10-16,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276138,ai helpers,BROAD,RUNNING,10,40.21,355,6,0,0,0,0,0
+2026-10-16,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276950,ai personal,BROAD,PAUSED,10,0,0,0,0,0,0,0,0
+2026-10-16,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276953,ai personal assistant app,BROAD,RUNNING,10,15.82,146,3,3,3,0,3,0
+2026-10-16,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276139,ai powered assistant,BROAD,RUNNING,10,56.54,201,7,0,0,0,0,0
+2026-10-16,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276944,ai powered personal assistant,BROAD,RUNNING,10,23.57,107,4,1,1,0,1,0
+2026-10-16,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276952,ai productivity assistant,BROAD,PAUSED,10,0,0,0,0,0,0,0,0
+2026-10-16,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276137,artificial intelligence assistant,BROAD,RUNNING,10,21.5,234,4,0,0,0,0,0
+2026-10-16,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276141,artificial intelligence virtual assistant,BROAD,RUNNING,10,25.34,265,3,0,0,0,0,0
+2026-10-16,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276945,assistant ai,BROAD,RUNNING,10,63.18,289,9,4,3,1,4,0
+2026-10-16,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276956,best ai assistant app,BROAD,RUNNING,10,32.28,142,5,2,2,0,2,0
+2026-10-16,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276962,best ai assistant for android,BROAD,RUNNING,10,0,33,0,0,0,0,0,0
+2026-10-16,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276947,best ai personal assistant,BROAD,RUNNING,10,0,57,0,0,0,0,0,0
+2026-10-16,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276946,best personal assistant ai,BROAD,RUNNING,10,17.98,65,3,0,0,0,0,0
+2026-10-16,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276954,digital assistant app,BROAD,PAUSED,10,0,0,0,0,0,0,0,0
+2026-10-16,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276961,digital personal assistant,BROAD,RUNNING,10,0,11,0,0,0,0,0,0
+2026-10-16,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276963,iphone ai assistant,BROAD,RUNNING,10,7.79,89,1,0,0,0,0,0
+2026-10-16,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276942,personal ai,BROAD,RUNNING,10,30.76,172,5,0,0,0,0,0
+2026-10-16,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276949,personal ai agent,BROAD,RUNNING,10,11.46,148,2,0,0,0,0,0
+2026-10-16,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276951,personal assistant app,BROAD,RUNNING,10,0,3,0,0,0,0,0,0
+2026-10-16,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276958,proactive ai assistant,BROAD,RUNNING,10,0,16,0,0,0,0,0,0
+2026-10-16,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276957,top ai assistant,BROAD,RUNNING,10,11.19,203,2,1,1,0,1,0
+2026-10-16,2144820683,General AI assistants,2151609067,General AI assistants,2342123557,ai agent app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-16,2144820683,General AI assistants,2151609067,General AI assistants,2342135361,ai assistant,EXACT,RUNNING,60,198,111,9,4,3,1,4,0
+2026-10-16,2144820683,General AI assistants,2151609067,General AI assistants,2342123542,ai assistant app,EXACT,RUNNING,30,0,1,0,0,0,0,0,0
+2026-10-16,2144820683,General AI assistants,2151609067,General AI assistants,2342123562,ai assistant apps,BROAD,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-16,2144820683,General AI assistants,2151609067,General AI assistants,2342123545,ai assistant for android,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-16,2144820683,General AI assistants,2151609067,General AI assistants,2344177296,ai assistant for business,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-16,2144820683,General AI assistants,2151609067,General AI assistants,2342123550,ai assistant online,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-16,2144820683,General AI assistants,2151609067,General AI assistants,2344177295,ai business assistant,EXACT,RUNNING,30,0,9,0,0,0,0,0,0
+2026-10-16,2144820683,General AI assistants,2151609067,General AI assistants,2342123561,ai digital assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-16,2144820683,General AI assistants,2151609067,General AI assistants,2342123552,ai personal,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-16,2144820683,General AI assistants,2151609067,General AI assistants,2342123555,ai personal assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-16,2144820683,General AI assistants,2151609067,General AI assistants,2342119141,ai powered assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-16,2144820683,General AI assistants,2151609067,General AI assistants,2342123546,ai powered personal assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-16,2144820683,General AI assistants,2151609067,General AI assistants,2342123554,ai productivity assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-16,2144820683,General AI assistants,2151609067,General AI assistants,2342135591,ai virtual assistant,EXACT,RUNNING,30,0,5,0,0,0,0,0,0
+2026-10-16,2144820683,General AI assistants,2151609067,General AI assistants,2342148702,artificial assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-16,2144820683,General AI assistants,2151609067,General AI assistants,2342119140,artificial intelligence assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-16,2144820683,General AI assistants,2151609067,General AI assistants,2342141997,artificial intelligence personal assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-16,2144820683,General AI assistants,2151609067,General AI assistants,2342123543,artificial intelligence virtual assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-16,2144820683,General AI assistants,2151609067,General AI assistants,2342123547,assistant ai,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-16,2144820683,General AI assistants,2151609067,General AI assistants,2342123558,best ai assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-16,2144820683,General AI assistants,2151609067,General AI assistants,2342123564,best ai assistant for android,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-16,2144820683,General AI assistants,2151609067,General AI assistants,2342123549,best ai personal assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-16,2144820683,General AI assistants,2151609067,General AI assistants,2342123548,best personal assistant ai,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-16,2144820683,General AI assistants,2151609067,General AI assistants,2342123556,digital assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-16,2144820683,General AI assistants,2151609067,General AI assistants,2342123563,digital personal assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-16,2144820683,General AI assistants,2151609067,General AI assistants,2342123565,iphone ai assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-16,2144820683,General AI assistants,2151609067,General AI assistants,2342123544,personal ai,EXACT,RUNNING,30,0,4,0,0,0,0,0,0
+2026-10-16,2144820683,General AI assistants,2151609067,General AI assistants,2342123551,personal ai agent,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-16,2144820683,General AI assistants,2151609067,General AI assistants,2342123553,personal assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-16,2144820683,General AI assistants,2151609067,General AI assistants,2342123560,proactive ai assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-16,2144820683,General AI assistants,2151609067,General AI assistants,2342123559,top ai assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-16,2144818472,Brand,2151607398,Brand,2342115244,brett adcock ai,EXACT,RUNNING,2,0,0,0,0,0,0,0,0
+2026-10-16,2144818472,Brand,2151607398,Brand,2342115246,hark,EXACT,RUNNING,2,48.62,1456,243,1072,158,914,997,75
+2026-10-16,2144818472,Brand,2151607398,Brand,2342115243,hark ai,EXACT,RUNNING,2,3.92,39,7,27,7,20,24,3
+2026-10-16,2144818472,Brand,2151607398,Brand,2342115245,hark pro,EXACT,RUNNING,2,52.12,385,94,275,73,202,262,13
+2026-10-17,2144823289,Competitors,2151621406,Competitors,2342187594,comet ai,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-17,2144823289,Competitors,2151621406,Competitors,2342167441,foai,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-17,2144823289,Competitors,2151621406,Competitors,2349044811,grock,EXACT,RUNNING,30,5.2,1,1,0,0,0,0,0
+2026-10-17,2144823289,Competitors,2151621406,Competitors,2349044814,grock ia,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-17,2144823289,Competitors,2151621406,Competitors,2349044813,grok,EXACT,RUNNING,60,0,3,0,0,0,0,0,0
+2026-10-17,2144823289,Competitors,2151621406,Competitors,2349044815,grok ai,EXACT,RUNNING,60,135.65,243,3,0,0,0,0,0
+2026-10-17,2144823289,Competitors,2151621406,Competitors,2349044810,grok ai free,EXACT,RUNNING,60,0,14,0,0,0,0,0,0
+2026-10-17,2144823289,Competitors,2151621406,Competitors,2349044812,grok bot,EXACT,RUNNING,60,77.88,28,2,2,2,0,2,0
+2026-10-17,2144823289,Competitors,2151621406,Competitors,2342167440,instinct ai,EXACT,RUNNING,30,0,2,0,0,0,0,0,0
+2026-10-17,2144823289,Competitors,2151621406,Competitors,2342167439,muse ai,EXACT,RUNNING,60,0,1,0,0,0,0,0,0
+2026-10-17,2144823289,Competitors,2151621406,Competitors,2342187593,muse from meta,EXACT,RUNNING,60,0,3,0,0,0,0,0,0
+2026-10-17,2144823289,Competitors,2151621406,Competitors,2342187592,muse meta,EXACT,RUNNING,60,0,0,0,0,0,0,0,0
+2026-10-17,2144823289,Competitors,2151621406,Competitors,2342167438,perplexityai,EXACT,PAUSED,30,0,0,0,0,0,0,0,0
+2026-10-17,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276955,ai agent app,BROAD,RUNNING,10,53.47,318,8,1,0,1,1,0
+2026-10-17,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276140,ai assistant app,BROAD,RUNNING,10,9.85,130,1,1,1,0,1,0
+2026-10-17,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276960,ai assistant apps,BROAD,RUNNING,10,18.42,114,2,1,1,0,1,0
+2026-10-17,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276943,ai assistant for android,BROAD,RUNNING,10,9.18,75,1,0,0,0,0,0
+2026-10-17,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276948,ai assistant online,BROAD,RUNNING,10,7.99,125,1,0,0,0,0,0
+2026-10-17,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276959,ai digital assistant,BROAD,RUNNING,10,9.19,246,1,0,0,0,0,0
+2026-10-17,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276138,ai helpers,BROAD,RUNNING,10,34.29,247,6,1,1,0,1,0
+2026-10-17,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276950,ai personal,BROAD,PAUSED,10,0,0,0,0,0,0,0,0
+2026-10-17,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276953,ai personal assistant app,BROAD,RUNNING,10,15.8,147,3,0,0,0,0,0
+2026-10-17,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276139,ai powered assistant,BROAD,RUNNING,10,15.46,163,3,0,0,0,0,0
+2026-10-17,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276944,ai powered personal assistant,BROAD,RUNNING,10,19.59,97,3,0,0,0,0,0
+2026-10-17,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276952,ai productivity assistant,BROAD,PAUSED,10,0,0,0,0,0,0,0,0
+2026-10-17,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276137,artificial intelligence assistant,BROAD,RUNNING,10,26.58,182,4,1,1,0,1,0
+2026-10-17,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276141,artificial intelligence virtual assistant,BROAD,RUNNING,10,36.09,189,5,0,0,0,0,0
+2026-10-17,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276945,assistant ai,BROAD,RUNNING,10,63.84,269,8,1,1,0,1,0
+2026-10-17,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276956,best ai assistant app,BROAD,RUNNING,10,30.65,143,6,2,2,0,2,0
+2026-10-17,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276962,best ai assistant for android,BROAD,RUNNING,10,19.27,37,3,2,2,0,2,0
+2026-10-17,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276947,best ai personal assistant,BROAD,RUNNING,10,4.82,49,1,0,0,0,0,0
+2026-10-17,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276946,best personal assistant ai,BROAD,RUNNING,10,26.3,55,4,1,1,0,1,0
+2026-10-17,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276954,digital assistant app,BROAD,PAUSED,10,0,0,0,0,0,0,0,0
+2026-10-17,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276961,digital personal assistant,BROAD,RUNNING,10,0,10,0,0,0,0,0,0
+2026-10-17,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276963,iphone ai assistant,BROAD,RUNNING,10,21.02,73,3,1,1,0,1,0
+2026-10-17,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276942,personal ai,BROAD,RUNNING,10,41.02,212,7,1,1,0,1,0
+2026-10-17,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276949,personal ai agent,BROAD,RUNNING,10,12.27,149,4,1,1,0,1,0
+2026-10-17,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276951,personal assistant app,BROAD,RUNNING,10,0,13,0,0,0,0,0,0
+2026-10-17,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276958,proactive ai assistant,BROAD,RUNNING,10,0,60,0,0,0,0,0,0
+2026-10-17,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276957,top ai assistant,BROAD,RUNNING,10,31.46,196,4,2,2,0,2,0
+2026-10-17,2144820683,General AI assistants,2151609067,General AI assistants,2342123557,ai agent app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-17,2144820683,General AI assistants,2151609067,General AI assistants,2342135361,ai assistant,EXACT,RUNNING,60,341.76,169,16,5,5,0,5,0
+2026-10-17,2144820683,General AI assistants,2151609067,General AI assistants,2342123542,ai assistant app,EXACT,RUNNING,30,8.92,6,1,1,1,0,1,0
+2026-10-17,2144820683,General AI assistants,2151609067,General AI assistants,2342123562,ai assistant apps,BROAD,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-17,2144820683,General AI assistants,2151609067,General AI assistants,2342123545,ai assistant for android,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-17,2144820683,General AI assistants,2151609067,General AI assistants,2344177296,ai assistant for business,EXACT,RUNNING,30,0,1,0,0,0,0,0,0
+2026-10-17,2144820683,General AI assistants,2151609067,General AI assistants,2342123550,ai assistant online,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-17,2144820683,General AI assistants,2151609067,General AI assistants,2344177295,ai business assistant,EXACT,RUNNING,30,0,7,0,0,0,0,0,0
+2026-10-17,2144820683,General AI assistants,2151609067,General AI assistants,2342123561,ai digital assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-17,2144820683,General AI assistants,2151609067,General AI assistants,2342123552,ai personal,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-17,2144820683,General AI assistants,2151609067,General AI assistants,2342123555,ai personal assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-17,2144820683,General AI assistants,2151609067,General AI assistants,2342119141,ai powered assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-17,2144820683,General AI assistants,2151609067,General AI assistants,2342123546,ai powered personal assistant,EXACT,RUNNING,30,0,2,0,0,0,0,0,0
+2026-10-17,2144820683,General AI assistants,2151609067,General AI assistants,2342123554,ai productivity assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-17,2144820683,General AI assistants,2151609067,General AI assistants,2342135591,ai virtual assistant,EXACT,RUNNING,30,0,1,0,0,0,0,0,0
+2026-10-17,2144820683,General AI assistants,2151609067,General AI assistants,2342148702,artificial assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-17,2144820683,General AI assistants,2151609067,General AI assistants,2342119140,artificial intelligence assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-17,2144820683,General AI assistants,2151609067,General AI assistants,2342141997,artificial intelligence personal assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-17,2144820683,General AI assistants,2151609067,General AI assistants,2342123543,artificial intelligence virtual assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-17,2144820683,General AI assistants,2151609067,General AI assistants,2342123547,assistant ai,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-17,2144820683,General AI assistants,2151609067,General AI assistants,2342123558,best ai assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-17,2144820683,General AI assistants,2151609067,General AI assistants,2342123564,best ai assistant for android,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-17,2144820683,General AI assistants,2151609067,General AI assistants,2342123549,best ai personal assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-17,2144820683,General AI assistants,2151609067,General AI assistants,2342123548,best personal assistant ai,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-17,2144820683,General AI assistants,2151609067,General AI assistants,2342123556,digital assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-17,2144820683,General AI assistants,2151609067,General AI assistants,2342123563,digital personal assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-17,2144820683,General AI assistants,2151609067,General AI assistants,2342123565,iphone ai assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-17,2144820683,General AI assistants,2151609067,General AI assistants,2342123544,personal ai,EXACT,RUNNING,30,0,2,0,0,0,0,0,0
+2026-10-17,2144820683,General AI assistants,2151609067,General AI assistants,2342123551,personal ai agent,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-17,2144820683,General AI assistants,2151609067,General AI assistants,2342123553,personal assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-17,2144820683,General AI assistants,2151609067,General AI assistants,2342123560,proactive ai assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-17,2144820683,General AI assistants,2151609067,General AI assistants,2342123559,top ai assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-17,2144818472,Brand,2151607398,Brand,2342115244,brett adcock ai,EXACT,RUNNING,2,0,0,0,0,0,0,0,0
+2026-10-17,2144818472,Brand,2151607398,Brand,2342115246,hark,EXACT,RUNNING,2,243.74,7209,1069,5075,717,4358,4307,768
+2026-10-17,2144818472,Brand,2151607398,Brand,2342115243,hark ai,EXACT,RUNNING,2,5.13,48,7,35,5,30,31,4
+2026-10-17,2144818472,Brand,2151607398,Brand,2342115245,hark pro,EXACT,RUNNING,2,335.31,3143,665,2311,506,1805,2151,160
+2026-10-18,2144823289,Competitors,2151621406,Competitors,2342187594,comet ai,EXACT,RUNNING,30,0,1,0,0,0,0,0,0
+2026-10-18,2144823289,Competitors,2151621406,Competitors,2342167441,foai,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-18,2144823289,Competitors,2151621406,Competitors,2349044811,grock,EXACT,RUNNING,30,0,1,0,0,0,0,0,0
+2026-10-18,2144823289,Competitors,2151621406,Competitors,2349044814,grock ia,EXACT,RUNNING,30,0,1,0,0,0,0,0,0
+2026-10-18,2144823289,Competitors,2151621406,Competitors,2349044813,grok,EXACT,RUNNING,60,0,3,0,0,0,0,0,0
+2026-10-18,2144823289,Competitors,2151621406,Competitors,2349044815,grok ai,EXACT,RUNNING,60,238.05,286,6,2,2,0,2,0
+2026-10-18,2144823289,Competitors,2151621406,Competitors,2349044810,grok ai free,EXACT,RUNNING,60,55.83,9,1,1,1,0,1,0
+2026-10-18,2144823289,Competitors,2151621406,Competitors,2349044812,grok bot,EXACT,RUNNING,60,6.15,29,1,1,1,0,0,1
+2026-10-18,2144823289,Competitors,2151621406,Competitors,2342167440,instinct ai,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-18,2144823289,Competitors,2151621406,Competitors,2342167439,muse ai,EXACT,RUNNING,60,0,0,0,0,0,0,0,0
+2026-10-18,2144823289,Competitors,2151621406,Competitors,2342187593,muse from meta,EXACT,RUNNING,60,0,2,0,0,0,0,0,0
+2026-10-18,2144823289,Competitors,2151621406,Competitors,2342187592,muse meta,EXACT,RUNNING,60,0,1,0,0,0,0,0,0
+2026-10-18,2144823289,Competitors,2151621406,Competitors,2342167438,perplexityai,EXACT,PAUSED,30,0,0,0,0,0,0,0,0
+2026-10-18,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276955,ai agent app,BROAD,RUNNING,10,28.91,357,6,1,1,0,1,0
+2026-10-18,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276140,ai assistant app,BROAD,RUNNING,10,14.46,99,2,1,1,0,1,0
+2026-10-18,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276960,ai assistant apps,BROAD,RUNNING,10,10.96,169,2,0,0,0,0,0
+2026-10-18,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276943,ai assistant for android,BROAD,RUNNING,10,20.27,120,4,0,0,0,0,0
+2026-10-18,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276948,ai assistant online,BROAD,RUNNING,10,36.55,183,6,1,1,0,1,0
+2026-10-18,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276959,ai digital assistant,BROAD,RUNNING,10,47.19,356,7,0,0,0,0,0
+2026-10-18,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276138,ai helpers,BROAD,RUNNING,10,36.94,331,5,3,2,1,3,0
+2026-10-18,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276950,ai personal,BROAD,PAUSED,10,0,0,0,0,0,0,0,0
+2026-10-18,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276953,ai personal assistant app,BROAD,RUNNING,10,16.26,123,2,1,1,0,1,0
+2026-10-18,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276139,ai powered assistant,BROAD,RUNNING,10,41.03,192,5,0,0,0,0,0
+2026-10-18,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276944,ai powered personal assistant,BROAD,RUNNING,10,28.81,113,4,2,2,0,2,0
+2026-10-18,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276952,ai productivity assistant,BROAD,PAUSED,10,0,0,0,0,0,0,0,0
+2026-10-18,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276137,artificial intelligence assistant,BROAD,RUNNING,10,39.79,236,6,1,1,0,1,0
+2026-10-18,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276141,artificial intelligence virtual assistant,BROAD,RUNNING,10,57.9,245,9,0,0,0,0,0
+2026-10-18,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276945,assistant ai,BROAD,RUNNING,10,48.89,256,6,1,1,0,1,0
+2026-10-18,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276956,best ai assistant app,BROAD,RUNNING,10,0,102,0,0,0,0,0,0
+2026-10-18,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276962,best ai assistant for android,BROAD,RUNNING,10,12.26,53,2,1,1,0,1,0
+2026-10-18,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276947,best ai personal assistant,BROAD,RUNNING,10,16.77,41,3,1,1,0,1,0
+2026-10-18,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276946,best personal assistant ai,BROAD,RUNNING,10,4.02,75,1,0,0,0,0,0
+2026-10-18,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276954,digital assistant app,BROAD,PAUSED,10,0,0,0,0,0,0,0,0
+2026-10-18,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276961,digital personal assistant,BROAD,RUNNING,10,0,8,0,0,0,0,0,0
+2026-10-18,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276963,iphone ai assistant,BROAD,RUNNING,10,1.69,111,1,0,0,0,0,0
+2026-10-18,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276942,personal ai,BROAD,RUNNING,10,29.26,255,4,1,1,0,1,0
+2026-10-18,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276949,personal ai agent,BROAD,RUNNING,10,3.98,136,1,0,0,0,0,0
+2026-10-18,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276951,personal assistant app,BROAD,RUNNING,10,0,16,0,0,0,0,0,0
+2026-10-18,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276958,proactive ai assistant,BROAD,RUNNING,10,0,32,0,0,0,0,0,0
+2026-10-18,2144831063,Discovery Keywords,2151663463,Discovery Broad,2343276957,top ai assistant,BROAD,RUNNING,10,9.48,119,1,0,0,0,0,0
+2026-10-18,2144820683,General AI assistants,2151609067,General AI assistants,2342123557,ai agent app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-18,2144820683,General AI assistants,2151609067,General AI assistants,2342135361,ai assistant,EXACT,RUNNING,60,497.97,127,16,6,6,0,6,0
+2026-10-18,2144820683,General AI assistants,2151609067,General AI assistants,2342123542,ai assistant app,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-18,2144820683,General AI assistants,2151609067,General AI assistants,2342123562,ai assistant apps,BROAD,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-18,2144820683,General AI assistants,2151609067,General AI assistants,2342123545,ai assistant for android,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-18,2144820683,General AI assistants,2151609067,General AI assistants,2344177296,ai assistant for business,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-18,2144820683,General AI assistants,2151609067,General AI assistants,2342123550,ai assistant online,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-18,2144820683,General AI assistants,2151609067,General AI assistants,2344177295,ai business assistant,EXACT,RUNNING,30,27.41,6,2,0,0,0,0,0
+2026-10-18,2144820683,General AI assistants,2151609067,General AI assistants,2342123561,ai digital assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-18,2144820683,General AI assistants,2151609067,General AI assistants,2342123552,ai personal,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-18,2144820683,General AI assistants,2151609067,General AI assistants,2342123555,ai personal assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-18,2144820683,General AI assistants,2151609067,General AI assistants,2342119141,ai powered assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-18,2144820683,General AI assistants,2151609067,General AI assistants,2342123546,ai powered personal assistant,EXACT,RUNNING,30,0,1,0,0,0,0,0,0
+2026-10-18,2144820683,General AI assistants,2151609067,General AI assistants,2342123554,ai productivity assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-18,2144820683,General AI assistants,2151609067,General AI assistants,2342135591,ai virtual assistant,EXACT,RUNNING,30,0,2,0,0,0,0,0,0
+2026-10-18,2144820683,General AI assistants,2151609067,General AI assistants,2342148702,artificial assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-18,2144820683,General AI assistants,2151609067,General AI assistants,2342119140,artificial intelligence assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-18,2144820683,General AI assistants,2151609067,General AI assistants,2342141997,artificial intelligence personal assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-18,2144820683,General AI assistants,2151609067,General AI assistants,2342123543,artificial intelligence virtual assistant,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-18,2144820683,General AI assistants,2151609067,General AI assistants,2342123547,assistant ai,EXACT,RUNNING,30,0,0,0,0,0,0,0,0
+2026-10-18,2144820683,General AI assistants,2151609067,General AI assistants,2342123558,best ai assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-18,2144820683,General AI assistants,2151609067,General AI assistants,2342123564,best ai assistant for android,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-18,2144820683,General AI assistants,2151609067,General AI assistants,2342123549,best ai personal assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-18,2144820683,General AI assistants,2151609067,General AI assistants,2342123548,best personal assistant ai,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-18,2144820683,General AI assistants,2151609067,General AI assistants,2342123556,digital assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-18,2144820683,General AI assistants,2151609067,General AI assistants,2342123563,digital personal assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-18,2144820683,General AI assistants,2151609067,General AI assistants,2342123565,iphone ai assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-18,2144820683,General AI assistants,2151609067,General AI assistants,2342123544,personal ai,EXACT,RUNNING,30,0,1,0,0,0,0,0,0
+2026-10-18,2144820683,General AI assistants,2151609067,General AI assistants,2342123551,personal ai agent,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-18,2144820683,General AI assistants,2151609067,General AI assistants,2342123553,personal assistant app,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-18,2144820683,General AI assistants,2151609067,General AI assistants,2342123560,proactive ai assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-18,2144820683,General AI assistants,2151609067,General AI assistants,2342123559,top ai assistant,EXACT,PAUSED,5,0,0,0,0,0,0,0,0
+2026-10-18,2144818472,Brand,2151607398,Brand,2342115244,brett adcock ai,EXACT,RUNNING,2,0,0,0,0,0,0,0,0
+2026-10-18,2144818472,Brand,2151607398,Brand,2342115246,hark,EXACT,RUNNING,2,40.89,1094,182,606,101,505,515,91
+2026-10-18,2144818472,Brand,2151607398,Brand,2342115243,hark ai,EXACT,RUNNING,2,3.78,17,5,14,5,9,13,1
+2026-10-18,2144818472,Brand,2151607398,Brand,2342115245,hark pro,EXACT,RUNNING,2,61.17,574,132,312,71,241,291,21
