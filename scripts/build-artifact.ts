@@ -114,6 +114,52 @@ const BUNDLE_PATCHES: Patch[] = [
     find: '(0,H.jsxs)(`div`,{className:t?`grid cols-2`:`grid`,children:[t&&(0,H.jsx)(jG,{}),',
     replace: '(0,H.jsxs)(`div`,{className:`grid cols-2`,children:[(0,H.jsx)(jG,{}),',
   },
+  // Custom date range picker (artifact/range-picker.js).
+  {
+    why: 'Comparison can be a custom range, not only the previous period',
+    find: 'd=(0,y.useMemo)(()=>HkU&&n.compare?Ps(HkU):null,[HkU,n.compare])',
+    replace:
+      'd=(0,y.useMemo)(()=>HkU&&n.compare?(n.cmpFrom&&n.cmpTo?{from:n.cmpFrom,to:n.cmpTo}:Ps(HkU)):null,[HkU,n.compare,n.cmpFrom,n.cmpTo])',
+  },
+  {
+    why: 'Presets reset the comparison; setCustom also takes the comparison from the picker',
+    find: 'setPreset:e=>r(t=>({...t,preset:e,from:null,to:null})),setCustom:e=>r(t=>({...t,preset:`custom`,from:e.from,to:e.to})),',
+    replace:
+      'setPreset:e=>r(t=>({...t,preset:e,from:null,to:null,cmpFrom:null,cmpTo:null})),setCustom:e=>r(t=>({...t,preset:`custom`,from:e.from,to:e.to,cmpFrom:e.cmpFrom??null,cmpTo:e.cmpTo??null,compare:e.compare??t.compare})),',
+  },
+  {
+    why: 'Tell the picker whether the comparison is custom',
+    find: 'range:HkU,prevRange:d,',
+    replace: 'range:HkU,prevRange:d,cmpCustom:!!(n.cmpFrom&&n.cmpTo),',
+  },
+  {
+    why: 'Expose the dashboard state to the picker on every render',
+    find: 'return(0,H.jsx)(nc.Provider,{value:p,children:e})}',
+    replace:
+      'return window.__harkDash=p,window.__harkOnDash&&window.__harkOnDash(p),(0,H.jsx)(nc.Provider,{value:p,children:e})}',
+  },
+  {
+    why: 'The Custom button opens the picker instead of two bare date inputs',
+    find: '(0,H.jsx)(`button`,{"aria-pressed":e===`custom`||d,onClick:()=>f(!0),children:`Custom`})',
+    replace:
+      '(0,H.jsx)(`button`,{"aria-pressed":e===`custom`||d,"aria-haspopup":`dialog`,onClick:HkE=>window.__harkOpenRange?window.__harkOpenRange(HkE.currentTarget):f(!0),children:`Custom`})',
+  },
+  {
+    why: 'Hide the bare date inputs when the picker is there',
+    find: '(d||e===`custom`)&&(0,H.jsxs)(`span`,{className:`date-inputs`,',
+    replace: '!window.__harkOpenRange&&(d||e===`custom`)&&(0,H.jsxs)(`span`,{className:`date-inputs`,',
+  },
+  {
+    why: 'Readout and toggle say when the comparison is a custom range',
+    find: 'i&&(0,H.jsxs)(`span`,{children:[` · vs `,Rs(i)]})',
+    replace: 'i&&(0,H.jsxs)(`span`,{children:[` · vs `,Rs(i),window.__harkDash?.cmpCustom?` (custom)`:``]})',
+  },
+  {
+    why: 'Compare toggle label',
+    find: 'onChange:e=>o(e.target.checked)}),`Compare to previous period`]',
+    replace:
+      'onChange:e=>o(e.target.checked)}),window.__harkDash?.cmpCustom?`Compare to custom range`:`Compare to previous period`]',
+  },
   {
     why: 'Empty state copy',
     find: '`Performance data for this dashboard is being refreshed. Please check back shortly.`',
@@ -147,6 +193,9 @@ export function buildArtifact(): string {
   const html = readFileSync(join(ROOT, 'reference', 'app', 'Index.html'), 'utf8');
   const uploads = readFileSync(join(ROOT, 'reference', 'data', 'uploads.json'), 'utf8');
   const live = readFileSync(join(ROOT, 'artifact', 'live.js'), 'utf8');
+  const picker = readFileSync(join(ROOT, 'artifact', 'range-picker.js'), 'utf8');
+  const pickerCss = readFileSync(join(ROOT, 'artifact', 'range-picker.css'), 'utf8');
+  if (picker.includes('</script')) throw new Error('range-picker.js must not contain </script');
   if (live.includes('</script')) throw new Error('live.js must not contain </script');
 
   // Pieces of the original page, in their original order.
@@ -223,12 +272,14 @@ export function buildArtifact(): string {
     '<title>Hark · Paid Media Performance</title>',
     `<style>${css}</style>`,
     `<style>${noticeCss}</style>`,
+    `<style>${pickerCss}</style>`,
     '<div id="root"></div>',
     notice,
     loader,
     themeInit,
     datasetScript,
     `<script>\n${live}\n</script>`,
+    `<script>\n${picker}\n</script>`,
     `<script type="module">${bundle}</script>`,
     '',
   ].join('\n');

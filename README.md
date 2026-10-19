@@ -11,6 +11,7 @@ A version that needs no hosting: the original dashboard build, published as a cl
 - **What it shows:** the Oct 19 export as the base. For viewers with the Shadow connector, Google Ads, Meta and TikTok load live (rolling 14 days, refreshed every 2 hours). Exported days stay as exported, and Shadow adds the closed days after them. Apple Search Ads stays on the export until Shadow can serve it.
 - **Gaps:** live days carry the gaps in `docs/gaps.md`: no Search installs, no Meta 3-second plays, no multi-ad TikTok reach. The page lists them under Data & methodology → Source health.
 - **Who can see it:** declaring a connector means it can't be shared by public link. Viewers without Shadow see the export.
+- **Date range picker:** "Custom" opens a calendar with quick ranges, typed dates and per-day coverage dots. The comparison can be the previous period, any custom range, or off, and the picker warns when the comparison has no spend for a channel or a different length. Code: `artifact/range-picker.js`.
 - **Code:** `artifact/live.js` is the live layer. `scripts/build-artifact.ts` assembles the page and applies the bundle patches as exact-match replacements.
 
 ```bash

@@ -1,0 +1,317 @@
+/* Custom date range picker. Uses the dashboard's own tokens (app/globals.css), so it follows both themes. */
+.hrp {
+  position: absolute;
+  z-index: 60;
+  width: min(760px, calc(100vw - 32px));
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  box-shadow:
+    var(--shadow),
+    0 12px 40px #0b0b0b29;
+  font-size: 13px;
+}
+.hrp-body {
+  display: grid;
+  grid-template-columns: 148px minmax(0, 1fr);
+}
+.hrp-quick {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px;
+  border-right: 1px solid var(--hairline);
+}
+.hrp-quick button {
+  appearance: none;
+  text-align: left;
+  padding: 6px 8px;
+  border: 0;
+  border-radius: 7px;
+  background: none;
+  color: var(--ink-2);
+  font: inherit;
+  font-size: 12.5px;
+  font-weight: 550;
+  cursor: pointer;
+}
+.hrp-quick button:hover {
+  background: var(--wash);
+  color: var(--ink);
+}
+.hrp-quick button[aria-pressed='true'] {
+  background: var(--surface-2);
+  color: var(--ink);
+}
+.hrp-quick button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.hrp-main {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+  padding: 12px 14px;
+}
+.hrp .segmented button[aria-pressed='true'] {
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: 0 1px 2px #0b0b0b1a;
+}
+.hrp-fields {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.hrp-fields input {
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--ink);
+  padding: 5px 8px;
+  font: inherit;
+  font-size: 12.5px;
+}
+.hrp-len {
+  color: var(--muted);
+  font-size: 12px;
+}
+.hrp-cal {
+  position: relative;
+}
+.hrp-nav {
+  position: absolute;
+  top: -2px;
+  right: 0;
+  display: flex;
+  gap: 4px;
+}
+.hrp-nav .icon-btn {
+  width: 28px;
+  padding: 2px 0;
+  font-size: 15px;
+  line-height: 1.2;
+}
+.hrp-nav .icon-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+.hrp-months {
+  display: grid;
+  gap: 20px;
+}
+.hrp-month-head {
+  font-weight: 600;
+  padding: 2px 0 8px;
+}
+.hrp-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  row-gap: 2px;
+}
+.hrp-dow {
+  color: var(--muted);
+  font-size: 11px;
+  text-align: center;
+  padding: 2px 0 4px;
+}
+.hrp-day {
+  position: relative;
+  appearance: none;
+  height: 34px;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: var(--ink);
+  font: inherit;
+  font-size: 12.5px;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+}
+.hrp-day:hover:not(:disabled) {
+  background: var(--wash);
+}
+.hrp-day:disabled {
+  color: var(--muted);
+  opacity: 0.4;
+  cursor: default;
+}
+.hrp-day.in {
+  background: var(--surface-2);
+}
+.hrp-day.start {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.hrp-day.end {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.hrp-day.start,
+.hrp-day.end,
+.hrp-day.start:hover,
+.hrp-day.end:hover {
+  background: var(--ink);
+  color: var(--page);
+}
+.hrp-day.cmp::before {
+  content: '';
+  position: absolute;
+  inset: 3px 0;
+  border-top: 1.5px dashed var(--ink-2);
+  border-bottom: 1.5px dashed var(--ink-2);
+  pointer-events: none;
+}
+.hrp-day.cstart::before {
+  left: 2px;
+  border-left: 1.5px dashed var(--ink-2);
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.hrp-day.cend::before {
+  right: 2px;
+  border-right: 1.5px dashed var(--ink-2);
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.hrp-day:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: -2px;
+  z-index: 1;
+}
+.hrp .dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.55;
+}
+.hrp .dot.part {
+  background: none;
+  box-shadow: inset 0 0 0 1px currentColor;
+}
+.hrp-day .dot {
+  position: absolute;
+  left: 50%;
+  bottom: 4px;
+  margin-left: -2.5px;
+}
+.hrp .swatch.cmp {
+  display: inline-block;
+  width: 14px;
+  height: 9px;
+  border: 1.5px dashed var(--ink-2);
+  border-radius: 3px;
+}
+.hrp-compare {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.hrp-notes {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.hrp-note {
+  margin: 0;
+  color: var(--ink-2);
+  font-size: 12.5px;
+}
+.hrp-note strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+.hrp-note.warn::before {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background: var(--status-warning);
+  vertical-align: 1px;
+}
+.hrp-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 12px;
+  padding: 10px 14px;
+  border-top: 1px solid var(--hairline);
+}
+.hrp-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  color: var(--muted);
+  font-size: 11.5px;
+}
+.hrp-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.hrp-actions {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}
+.hrp-btn {
+  appearance: none;
+  padding: 6px 14px;
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.hrp-btn.primary {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--page);
+}
+.hrp-btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.hrp-btn:focus-visible,
+.hrp-quick button:focus-visible,
+.hrp .segmented button:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+@media (max-width: 640px) {
+  .hrp-body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .hrp-quick {
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-right: 0;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .hrp-day {
+    height: 38px;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hrp {
+    animation: hrp-in 0.12s ease-out;
+  }
+  @keyframes hrp-in {
+    from {
+      opacity: 0;
+      transform: translateY(-4px);
+    }
+  }
+}
